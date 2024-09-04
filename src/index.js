@@ -127,19 +127,68 @@ const newUsers = [
 
 // console.log(checkUserName(users, 'Jack'))
 
-const arr = [1, 2, 3, 1, 2, 3];
+// const arr = [1, 2, 3, 1, 2, 3];
 // const uniqueValues = [...new Set(arr)];
 // console.log(uniqueValues)
 
-const uniqueArr = arr => {
-  const result = [];
+// const uniqueArr = arr => {
+//   const result = [];
 
-  arr.map(el => {
-    if (!result.includes(el)) {
-      result.push(el);
-    }
-  })
+//   arr.map(el => {
+//     if (!result.includes(el)) {
+//       result.push(el);
+//     }
+//   })
 
-  return result;
+//   return result;
+// }
+// console.log(uniqueArr(arr));
+
+// const uniqueArr = arr => {
+//   return arr.reduce((acc, el) => {
+//     if (!acc.includes(el)) {
+//       acc.push(el);
+//     }
+//     return acc;
+//   }, [])
+// }
+
+// const uniqueArr = arr => {
+//   return arr.reduce((acc, el) => {
+//     return acc.includes(el) ? acc : [...acc, el];
+//   }, [])
+// }
+// console.log(uniqueArr(arr))
+
+// const arr = [1, 2, 3, 1, 2, 3];
+
+
+// const sortArr = arr => {
+//   return [...arr].sort((firstEl, nextEl) => firstEl - nextEl)
+
+// }
+
+// console.log(sortArr(arr));
+
+// const names = ['masha', 'nicadamus', 'masik'];
+
+
+// const sortArr = (arr) => {
+//   return [...arr].sort((firstEl, secondEl) => firstEl.toLocaleCompare(secondEl));
+// }
+
+// const sortArr = (arr) => {
+//   console.log(arr)
+//   return [...arr].sort((firstEl, secondEl) => firstEl.toLocaleCompare(secondEl));
+// }
+
+// console.log(sortArr(names));
+
+const sortArr = (arr) => {
+  return [...arr].toSorted((firstEl, secondEl) => firstEl.localeCompare(secondEl));
 }
-console.log(uniqueArr(arr));
+
+const names = ['masha', 'nicadamus', 'masik'];
+const sortedNames = sortArr(names);
+
+console.log(sortedNames);
