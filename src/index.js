@@ -241,14 +241,25 @@ const newUsers = [
 
 // console.log(findvowels("a,g,b,n,t,r,u,i,o,j,k"));
 
-const findvowels = str => {
-  const vowels = ['a', 'o', 'i', 'e', 'u'];
-  const inputArray = str.split(',');
+// const findvowels = str => {
+//   const vowels = ['a', 'o', 'i', 'e', 'u'];
+//   const inputArray = str.split(',');
 
-  return inputArray.reduce((acc, el) => {
-    if (vowels.includes(el)) acc += 1;
-    return acc;
-  }, 0);
+//   return inputArray.reduce((acc, el) => {
+//     const loweredCaseEl = el.toLowerCase();
+//     if (vowels.includes(loweredCaseEl)) acc += 1;
+//     return acc;
+//   }, 0);
+// }
+
+// console.log(findvowels("a,g,b,n,t,r,u,i,o,j,k"));
+
+const str = "Welcome to this neighbourhood!";
+
+
+const reverseStr = (str) => {
+  const strArr = str.split(' ');
+  return strArr.toReversed().join(' ');
 }
 
-console.log(findvowels("a,g,b,n,t,r,u,i,o,j,k"));
+console.log(reverseStr(str));
