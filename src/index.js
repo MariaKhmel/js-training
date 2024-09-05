@@ -184,11 +184,37 @@ const newUsers = [
 
 // console.log(sortArr(names));
 
-const sortArr = (arr) => {
-  return [...arr].toSorted((firstEl, secondEl) => firstEl.localeCompare(secondEl));
-}
+// const sortArr = (arr) => {
+//   return [...arr].toSorted((firstEl, secondEl) => firstEl.localeCompare(secondEl));
+// }
 
-const names = ['masha', 'nicadamus', 'masik'];
-const sortedNames = sortArr(names);
+// const names = ['masha', 'nicadamus', 'masik'];
+// const sortedNames = sortArr(names);
 
-console.log(sortedNames);
+// console.log(sortedNames);
+
+// const saveSecretWord = () => {
+//   const secretWord = 'secret';
+
+//   return {
+//     getSecretWord() {
+//       return secretWord;
+//     },
+//   }
+
+// }
+
+// const secretObject = saveSecretWord();
+// const secretWord = secretObject.getSecretWord();
+// console.log(secretWord)
+
+// const saveSecretWord = () => {
+//   const secretWord = 'secret';
+
+//   return () => secretWord;
+
+// }
+
+
+// const secretWord = saveSecretWord();
+// console.log(secretWord())
