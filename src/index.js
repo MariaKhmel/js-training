@@ -218,3 +218,11 @@ const newUsers = [
 
 // const secretWord = saveSecretWord();
 // console.log(secretWord())
+
+// const obj = { a: 2, b: 3 };
+
+// const clone = Object.assign({}, obj);
+// clone.c = 5;
+
+// const clone2 = { ...obj };
+// console.log(clone2);
