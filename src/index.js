@@ -226,3 +226,29 @@ const newUsers = [
 
 // const clone2 = { ...obj };
 // console.log(clone2);
+
+// const findvowels = stringToCheck => {
+//   let vowelCounter = 0;
+//   const vowels = ['a', 'o', 'i', 'e', 'u'];
+//   stringToCheck.split(',').map(item => {
+//     if (vowels.includes(item)) {
+//       vowelCounter += 1;
+//     }
+//   })
+
+//   return vowelCounter;
+// }
+
+// console.log(findvowels("a,g,b,n,t,r,u,i,o,j,k"));
+
+const findvowels = str => {
+  const vowels = ['a', 'o', 'i', 'e', 'u'];
+  const inputArray = str.split(',');
+
+  return inputArray.reduce((acc, el) => {
+    if (vowels.includes(el)) acc += 1;
+    return acc;
+  }, 0);
+}
+
+console.log(findvowels("a,g,b,n,t,r,u,i,o,j,k"));
