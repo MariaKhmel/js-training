@@ -254,12 +254,20 @@ const newUsers = [
 
 // console.log(findvowels("a,g,b,n,t,r,u,i,o,j,k"));
 
-const str = "Welcome to this neighbourhood!";
+// const str = "Welcome to this neighbourhood!";
 
 
-const reverseStr = (str) => {
-  const strArr = str.split(' ');
-  return strArr.toReversed().join(' ');
+// const reverseStr = (str) => {
+//   const strArr = str.split(' ');
+//   return strArr.toReversed().join(' ');
+// }
+
+// console.log(reverseStr(str));
+
+const findCommonStr = arr => {
+  console.log(arr.map(el => el))
+
 }
 
-console.log(reverseStr(str));
+const arr = ['aaa', 'kk', 'bb', 'kk'];
+console.log(findCommonStr(arr));
