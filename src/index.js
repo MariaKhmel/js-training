@@ -265,9 +265,28 @@ const newUsers = [
 // console.log(reverseStr(str));
 
 const findCommonStr = arr => {
-  console.log(arr.map(el => el))
+  const commonStrObj = {};
+  arr.forEach(str => {
+    if (commonStrObj[str] === undefined) {
+      commonStrObj[str] = 1;
+    } else {
+      commonStrObj[str]++
+    }
+  })
+
+  let maxEntry;
+  let maxValue = 0;
+
+  for (str in commonStrObj) {
+    if (commonStrObj[str] > maxValue) {
+      maxValue = commonStrObj[str];
+      maxEntry = str;
+    }
+  }
+
+  return maxEntry;
 
 }
 
-const arr = ['aaa', 'kk', 'bb', 'kk'];
+const arr = ['a', 'k', 'b', 'k'];
 console.log(findCommonStr(arr));
