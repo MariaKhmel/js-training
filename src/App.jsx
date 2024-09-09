@@ -1,52 +1,81 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-const countries = [
-  {
-    name: "India",
-    value: "IN",
-    cities: ["Delhi"],
-  },
-  {
-    name: "Pak",
-    value: "PK",
-    cities: ["Lahore", "Karachi"],
-  },
-  {
-    name: "Bangladesh",
-    value: "BG",
-    cities: ["Dhaka", "Chittagong"],
-  },
-];
-
+// const countries = [
+//   {
+//     name: "India",
+//     value: "IN",
+//     cities: ["Delhi"],
+//   },
+//   {
+//     name: "Pak",
+//     value: "PK",
+//     cities: ["Lahore", "Karachi"],
+//   },
+//   {
+//     name: "Bangladesh",
+//     value: "BG",
+//     cities: ["Dhaka", "Chittagong"],
+//   },
+// ];
+const basicUrl = "https://jsonplaceholder.typicode.com/todos";
 const App = () => {
-  const [country, setCountry] = useState(countries[0]);
+  const [todos, setTodos] = useState([]);
+  const [todosPerPage, setTodosPerPage] = useState(20);
 
-  const handleCountryChange = (e) =>
-    countries.find((country) => {
-      if (country.value === e.target.value) {
-        setCountry(country);
-      }
-    });
-  // setCountry(countries[e.target.value])
+  const numOfTotalPages = Math.ceil(todos.length / todosPerPage);
+  const pages = [...Array(numOfTotalPages + 1).keys()].slice(1);
+  console.log(pages);
+
+  useEffect(() => {
+    const fetchTodos = () => {
+      fetch(`${basicUrl}`)
+        .then((res) => res.json())
+        .then((result) => setTodos(result));
+    };
+
+    fetchTodos();
+  }, []);
+
   return (
     <>
-      <select onChange={handleCountryChange}>
-        {countries.map(({ name, value }, index) => (
-          <option key={value} value={value}>
-            {name}
-          </option>
+      <ul>
+        {todos.map(({ id, title }) => (
+          <li key={id}>{title}</li>
         ))}
-      </select>
-
-      <select>
-        {country.cities.map((el) => (
-          <option key={el} value={el}>
-            {el}
-          </option>
+      </ul>
+      <h1>
+        {pages.map((page) => (
+          <span key={page}>{`${page} | `}</span>
         ))}
-      </select>
+      </h1>
     </>
   );
+  // const [country, setCountry] = useState(countries[0]);
+  // const handleCountryChange = (e) =>
+  //   countries.find((country) => {
+  //     if (country.value === e.target.value) {
+  //       setCountry(country);
+  //     }
+  //   });
+  // return (
+  //   <>
+  //     <select onChange={handleCountryChange}>
+  //       {countries.map(({ name, value }) => (
+  //         <option key={value} value={value}>
+  //           {name}
+  //         </option>
+  //       ))}
+  //     </select>
+  //     <select>
+  //       {country.cities.map((el) => (
+  //         <option key={el} value={el}>
+  //           {el}
+  //         </option>
+  //       ))}
+  //     </select>
+  //   </>
+  // );
 };
 
 export default App;
