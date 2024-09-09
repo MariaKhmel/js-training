@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import css from "./App.module.css";
 // const countries = [
 //   {
 //     name: "India",
@@ -21,11 +21,26 @@ import { useEffect, useState } from "react";
 const basicUrl = "https://jsonplaceholder.typicode.com/todos";
 const App = () => {
   const [todos, setTodos] = useState([]);
-  const [todosPerPage, setTodosPerPage] = useState(20);
+  const [todosPerPage, setTodosPerPage] = useState(10);
 
   const numOfTotalPages = Math.ceil(todos.length / todosPerPage);
   const pages = [...Array(numOfTotalPages + 1).keys()].slice(1);
-  console.log(pages);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const indexOfLastTodo = currentPage * todosPerPage; //40
+  const indexOfFirstTodo = indexOfLastTodo - todosPerPage; //30
+  const visibleTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
+
+  const prevPageHandler = () => {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+  const nextPageHandler = () => {
+    if (currentPage !== numOfTotalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
   useEffect(() => {
     const fetchTodos = () => {
@@ -39,16 +54,27 @@ const App = () => {
 
   return (
     <>
+      <select onChange={(e) => setTodosPerPage(e.target.value)}>
+        <option value={10}>10</option>
+        <option value={20}>20</option>
+        <option value={30}>30</option>
+      </select>
       <ul>
-        {todos.map(({ id, title }) => (
+        {visibleTodos.map(({ id, title }) => (
           <li key={id}>{title}</li>
         ))}
       </ul>
-      <h1>
+      <span onClick={prevPageHandler}>Prev</span>
+      <p>
         {pages.map((page) => (
-          <span key={page}>{`${page} | `}</span>
+          <span
+            key={page}
+            onClick={() => setCurrentPage(page)}
+            className={currentPage === page ? css.active : ""}
+          >{`${page} | `}</span>
         ))}
-      </h1>
+      </p>
+      <span onClick={nextPageHandler}>Next</span>
     </>
   );
   // const [country, setCountry] = useState(countries[0]);
