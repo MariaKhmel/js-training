@@ -1,44 +1,44 @@
-const users = [
-  {
-    id: 1,
-    name: "Jack",
-    isActive: true,
-    age: 20,
-  },
-  {
-    id: 2,
-    name: "John",
-    isActive: true,
-    age: 18,
-  },
-  {
-    id: 3,
-    name: "Mike",
-    isActive: false,
-    age: 30,
-  },
-];
+// const users = [
+//   {
+//     id: 1,
+//     name: "Jack",
+//     isActive: true,
+//     age: 20,
+//   },
+//   {
+//     id: 2,
+//     name: "John",
+//     isActive: true,
+//     age: 18,
+//   },
+//   {
+//     id: 3,
+//     name: "Mike",
+//     isActive: false,
+//     age: 30,
+//   },
+// ];
 
-const newUsers = [
-  {
-    id: 4,
-    name: "Jack",
-    isActive: true,
-    age: 20,
-  },
-  {
-    id: 5,
-    name: "John",
-    isActive: true,
-    age: 18,
-  },
-  {
-    id: 6,
-    name: "Mike",
-    isActive: false,
-    age: 30,
-  },
-];
+// const newUsers = [
+//   {
+//     id: 4,
+//     name: "Jack",
+//     isActive: true,
+//     age: 20,
+//   },
+//   {
+//     id: 5,
+//     name: "John",
+//     isActive: true,
+//     age: 18,
+//   },
+//   {
+//     id: 6,
+//     name: "Mike",
+//     isActive: false,
+//     age: 30,
+//   },
+// ];
 
 
 // for (i = 0; i < users.length; i += 1) {
@@ -292,10 +292,10 @@ const newUsers = [
 // console.log(findCommonStr(arr));
 
 
-const person = {
-  'name': 'Ram',
-  age: 22,
-}
+// const person = {
+//   'name': 'Ram',
+//   age: 22,
+// }
 
 // console.log(Object.entries(person))
 
@@ -313,3 +313,45 @@ const person = {
 
 // const num = 5;
 // console.log([...Array(num + 1).keys()].slice(1))
+
+// const input = [2, 7, 11, 4, -2];
+// const output = [20, 15, 11, 18, 24];
+
+// const output = input.reduce((acc, el) => {
+//   const indexOfEl = input.indexOf(el);
+//   let sum = 0;
+//   input.map(number => sum += number);
+//   acc.push(sum - input[indexOfEl]);
+//   return acc;
+// }, [])
+
+// console.log(output)
+
+// const arr = [2, 3, 4, 5];
+
+// const doubleNumbers = arr.map(function (number) {
+//   return number * 2
+// });
+// console.log(doubleNumbers);
+
+// const person = {
+//   name: 'Tom',
+//   sayHi: function () {
+//     return `Hello, ${this.name} `;
+//   }
+// }
+
+// console.log(person.sayHi());
+
+// const user = {
+//   name: 'Tom',
+//   address: {
+//     street: 'St.Patrick'
+//   }
+// }
+
+const user = null
+
+const { name, address } = { ...user };
+const { street } = { ...address };
+console.log(name, street);

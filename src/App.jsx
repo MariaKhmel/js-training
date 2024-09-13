@@ -54,7 +54,7 @@ const App = () => {
 
   return (
     <>
-      {/* <select onChange={(e) => setTodosPerPage(e.target.value)}>
+      <select onChange={(e) => setTodosPerPage(e.target.value)}>
         <option value={10}>10</option>
         <option value={20}>20</option>
         <option value={30}>30</option>
@@ -75,7 +75,7 @@ const App = () => {
         ))}
       </p>
       <span onClick={nextPageHandler}>Next</span>
-    </> */}
+    </>
   );
   // const [country, setCountry] = useState(countries[0]);
   // const handleCountryChange = (e) =>
