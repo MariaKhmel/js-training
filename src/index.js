@@ -381,7 +381,7 @@
 // console.log(reversedString);
 // console.log(str)
 
-const arr = ['hello', 'javascript', 'array', 'javascript', 'javascript', 'hello'];
+// const arr = ['hello', 'javascript', 'array', 'javascript', 'javascript', 'hello'];
 
 // const findOccurance = arr => {
 //   const obj = {}
@@ -409,7 +409,7 @@ const arr = ['hello', 'javascript', 'array', 'javascript', 'javascript', 'hello'
 
 // console.log(findOccurance(arr));
 
-const numArr = [1, 4, 6, 3, 2, -8];
+// const numArr = [4, 4, 6, 3, 2,2, -8];
 
 // const findMaxNum = numbers => {
 //   let maxNum = numbers[0];
@@ -422,6 +422,106 @@ const numArr = [1, 4, 6, 3, 2, -8];
 //   return maxNum;
 // }
 
-const findMaxNum = numbers => numbers.reduce((prev, curr) => prev > curr ? prev : curr);
+// const findMaxNum = numbers => numbers.reduce((prev, curr) => prev > curr ? prev : curr);
 
-console.log(findMaxNum(numArr));
+// console.log(findMaxNum(numArr));
+
+// const numArr = [4, 4, 6, 3, 2, 2, -8];
+
+// const findUniqueValue = arr => {
+//   return [...new Set(arr)];
+// }
+
+// const findUniqueValue = arr => {
+//   const newArr = [];
+//   arr.forEach(el => {
+//     if (!newArr.includes(el)) {
+//       newArr.push(el);
+//     }
+//   })
+//   return newArr;
+// }
+
+// const findUniqueValue = arr => {
+//   return arr.reduce((acc, el) => {
+//     if (!acc.includes(el)) {
+//       acc.push(el);
+//     }
+
+//     return acc;
+//   }, [])
+// }
+
+// const findUniqueValue = arr => {
+//   return arr.filter((el, i, array) => array.indexOf(el) === i);
+// }
+
+// console.log(findUniqueValue(numArr));
+
+// const arr = ['lets', 'learn', 'software', 'development'];
+
+// const sentenceMaker = array => {
+//   return array.join(' ');
+// }
+
+// console.log(sentenceMaker(arr))
+
+// const reverseArr = arr => {
+//   return arr.toReversed();
+// };
+
+
+// const reverseArr = (arr) => arr.reduceRight((acc, elem) => {
+//   acc.push(elem);
+//   return acc;
+// }, [])
+
+
+// console.log(reverseArr(arr));
+
+// console.log(arr)
+
+// const arr = [false, undefined, 0, 1, 'Coding', null, -10];
+
+// const removeFalsyValues = arr => {
+//   return arr.filter(el => Boolean(el) !== false)
+// }
+
+// console.log(removeFalsyValues(arr));
+
+// const str = '25';
+
+// console.log(typeof parseInt(str))
+
+const obj = {
+  'name': 'Tom',
+  'age': 25,
+}
+
+// console.log(Object.keys(obj))
+// console.log(Object.values(obj))
+
+// console.log(Object.keys(obj))
+// const values = [];
+// for (const el in obj) {
+//   if (obj.hasOwnProperty(el)) {
+//     values.push(obj[el])
+//   }
+
+
+// }
+// console.log(values)
+
+// const entries = Object.entries(obj);
+// console.log(entries);
+
+// const keys = [];
+// const values = [];
+
+// entries.map(el => {
+//   keys.push(el[0]);
+//   values.push(el[1]);
+// })
+
+// console.log(keys);
+// console.log(values);
