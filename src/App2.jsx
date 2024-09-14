@@ -17,7 +17,6 @@
 // export default App2;
 
 import { useState } from "react";
-import "./styles.css";
 
 const ERR_MSG = "Please enter value greater than 12";
 

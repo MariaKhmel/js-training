@@ -350,8 +350,76 @@
 //   }
 // }
 
-const user = null
+// const user = null
 
-const { name, address } = { ...user };
-const { street } = { ...address };
-console.log(name, street);
+// const { name, address } = { ...user };
+// const { street } = { ...address };
+// console.log(name, street);
+
+// const str = "aa bb aa";
+
+// const result = [...new Set(str.split(" "))].join(" ");
+// const tryr = new Set(str.split(" "));
+// console.log(typeof tryr)
+// console.log(result);
+
+
+// const arr = ['aaa', 'bbb', 'ccc'];
+
+// Array.prototype.myForEach = function (callback) {
+//   for (let i = 0; i < this.length; i += 1) {
+//     callback(this[i], i, this);
+//   }
+// }
+
+// arr.myForEach(el => console.log(el))
+
+// const str = 'This is string to reverse';
+
+// const reversedString = str.split(" ").reverse().join(" ");
+
+// console.log(reversedString);
+// console.log(str)
+
+const arr = ['hello', 'javascript', 'array', 'javascript', 'javascript', 'hello'];
+
+// const findOccurance = arr => {
+//   const obj = {}
+//   arr.forEach((el) => {
+//     if (obj[el] !== undefined) {
+//       obj[el] += 1;
+//     } else {
+//       obj[el] = 1;
+//     }
+
+//   })
+//   return obj;
+// }
+
+// const findOccurance = arr => {
+//   return arr.reduce((acc, el) => {
+//     if (acc[el] !== undefined) {
+//       acc[el] += 1;
+//     } else {
+//       acc[el] = 1;
+//     }
+//     return acc;
+//   }, {})
+// }
+
+// console.log(findOccurance(arr));
+
+const numArr = [1, 4, 6, 3, 2, -8];
+
+const findMaxNum = numbers => {
+  let maxNum = numbers[0];
+  numbers.forEach(num => {
+    if (num > maxNum) {
+
+      maxNum = num;
+    }
+  })
+  return maxNum;
+}
+
+console.log(findMaxNum(numArr));
