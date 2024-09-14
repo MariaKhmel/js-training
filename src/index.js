@@ -411,15 +411,17 @@ const arr = ['hello', 'javascript', 'array', 'javascript', 'javascript', 'hello'
 
 const numArr = [1, 4, 6, 3, 2, -8];
 
-const findMaxNum = numbers => {
-  let maxNum = numbers[0];
-  numbers.forEach(num => {
-    if (num > maxNum) {
+// const findMaxNum = numbers => {
+//   let maxNum = numbers[0];
+//   numbers.forEach(num => {
+//     if (num > maxNum) {
 
-      maxNum = num;
-    }
-  })
-  return maxNum;
-}
+//       maxNum = num;
+//     }
+//   })
+//   return maxNum;
+// }
+
+const findMaxNum = numbers => numbers.reduce((prev, curr) => prev > curr ? prev : curr);
 
 console.log(findMaxNum(numArr));
