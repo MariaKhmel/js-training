@@ -495,10 +495,10 @@ import { Children } from "react";
 
 // console.log(typeof parseInt(str))
 
-const obj = {
-  'name': 'Tom',
-  'age': 25,
-}
+// const obj = {
+//   'name': 'Tom',
+//   'age': 25,
+// }
 
 // console.log(Object.keys(obj))
 // console.log(Object.values(obj))
@@ -538,7 +538,7 @@ const obj = {
 
 // console.log(extractLastElements(2))
 
-const numbers = [1, -2, 3, -4, 5, -6, -7, 8, 9];
+// const numbers = [1, -2, 3, -4, 5, -6, -7, 8, 9];
 
 // const countNegativeNums = (arr) => {
 //   const positiveNumbers = [];
@@ -571,7 +571,7 @@ const numbers = [1, -2, 3, -4, 5, -6, -7, 8, 9];
 // }
 // console.log(countNegativeNums(numbers));
 
-const numsArr = [10, 10, 10, 10];
+// const numsArr = [10, 10, 10, 10];
 
 // const checkIfNumbersAreSame = numbers => {
 //   let isSame = true;
@@ -602,15 +602,59 @@ const numsArr = [10, 10, 10, 10];
 
 // console.log(Object.getOwnPropertyNames(Array.prototype));
 
-const obj = {
-  temp: 30,
-  windSpeed: 13,
-}
+// const obj = {
+//   temp: 30,
+//   windSpeed: 13,
+// }
 
-const renameObjKeys = obj => {
-  obj.forIn(el => {
+// const renameObjKeys = obj => {
+//   const { temp: wa_temp, windSpeed: wa_windSpeed } = obj;
 
-  })
-}
+//   const newObj = Object.assign({}, { wa_temp, wa_windSpeed });
+//   return newObj;
+// }
 
-console.log(renameObjKeys(obj));
+
+// const renameObjKeys = obj => {
+
+//   const newObj = Object.fromEntries(Object.entries(obj).map(([key, value]) => [`wa_${key}`, value]));
+
+//   return newObj;
+// }
+
+
+
+// console.log(renameObjKeys(obj));
+
+
+// const obj = {
+//   temp: 30,
+//   windSpeed: 13,
+//   humidity: 0.4,
+// }
+
+
+// const mapper = {
+//   temp: "wa_temp",
+//   windSpeed: "fe_windSpeed",
+//   humidity: "ta_humidity",
+// }
+
+
+// const renameKeys = data => {
+
+//   let mappedObject = {};
+
+//   Object.keys(data).forEach(key => {
+//     if (mapper[key]) {
+//       mappedObject[mapper[key]] = obj[key];
+//     } else {
+//       mappedObject[key] = obj[key];
+//     }
+//   })
+
+//   return mappedObject;
+
+// }
+
+// console.log(renameKeys(obj))
