@@ -659,6 +659,93 @@ import { Children } from "react";
 
 // console.log(renameKeys(obj))
 
-const str = "le t's con cat the st r";
+// const str = "le t's con cat the st r";
 
-console.log(str)
+// console.log(str.replace(/ /g, ""))
+
+// console.log(str.split(' ').join(''))
+
+// const removeStrSpaces = text => {
+//   let trimmedStr = '';
+
+//   for (let i = 0; i < str.length; i += 1) {
+//     if (str[i].trim()) {
+//       trimmedStr += str[i];
+//     }
+//   }
+
+//   return trimmedStr;
+
+// }
+
+// console.log(removeStrSpaces(str));
+
+
+const movie = {
+  title: 'Inception',
+  director: 'Christopher Nolan',
+  releaseYear: 2010,
+  genre: 'Science Fiction',
+  duration: 148,
+  rating: 8.8,
+  leadActor: 'Leonardo DiCaprio',
+  boxOffice: '836.8 million USD'
+};
+
+// delete movie.boxOffice;
+// console.log(movie)
+
+// const removeProps = (obj, arr) => {
+//   const keys = Object.keys(obj);
+//   keys.forEach(el => {
+//     if (arr.includes(el)) {
+//       delete obj.key;
+//     }
+//   })
+
+//   return obj;
+
+// }
+
+
+// const removeProps = (obj, arr) => {
+//   for (let i = 0; i < arr.length; i += 1) {
+//     delete obj[arr[i]];
+//   }
+
+//   return obj;
+// }
+
+// const removeProps = (obj, arr) => {
+//   for (const key of arr) {
+//     delete obj[key];
+//   }
+
+//   return obj;
+// }
+
+
+// console.log(removeProps(movie, ['boxOffice', 'rating']))
+
+// const str = '090 110 997 06';
+
+// const swapValues = (data, v1, v2) => {
+
+//   let swapedStr = '';
+//   for (let i = 0; i < data.length; i += 1) {
+//     if (data[i] === v1) {
+//       swapedStr += v2;
+//     } else if (data[i] === v2) {
+//       swapedStr += v1;
+//     } else {
+//       swapedStr += data[i];
+//     }
+//   }
+
+//   return swapedStr;
+// }
+// const swapValues = (data, v1, v2) => {
+//   return [...data].map(value => value === v1 ? v2 : value === v2 ? v1 : value).join('');
+// }
+
+// console.log(swapValues(str, "9", "0"));
