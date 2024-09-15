@@ -19,6 +19,8 @@
 //   },
 // ];
 
+import { Children } from "react";
+
 // const newUsers = [
 //   {
 //     id: 4,
@@ -525,3 +527,90 @@ const obj = {
 
 // console.log(keys);
 // console.log(values);
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const extractLastElements = (num) => {
+//   const arrLength = numbers.length;
+//   const numberToRemove = arrLength - num;
+//   return numbers.slice(-num);
+// }
+
+// console.log(extractLastElements(2))
+
+const numbers = [1, -2, 3, -4, 5, -6, -7, 8, 9];
+
+// const countNegativeNums = (arr) => {
+//   const positiveNumbers = [];
+//   arr.forEach(el => {
+//     if (el < 0) {
+//       positiveNumbers.push(el);
+//     }
+//   })
+
+//   return positiveNumbers;
+// }
+
+
+// const countNegativeNums = (arr) => {
+//   return arr.reduce((acc, curr) => {
+//     if (curr < 0) {
+//       acc.push(curr);
+//     };
+//     return acc;
+//   }, []).length;
+// }
+
+// const countNegativeNums = (arr) => {
+//   return arr.reduce((acc, curr) => curr < 0 ? acc + 1 : acc, 0);
+// }
+
+// const countNegativeNums = (arr) => {
+//   const negativeNymbers = arr.filter(el => el < 0);
+//   return negativeNymbers.length;
+// }
+// console.log(countNegativeNums(numbers));
+
+const numsArr = [10, 10, 10, 10];
+
+// const checkIfNumbersAreSame = numbers => {
+//   let isSame = true;
+//   numbers.forEach((el, index, array) => {
+//     const nextIdx = index + 1;
+//     if (array[nextIdx] && el !== array[nextIdx]) {
+//       isSame = false;
+//     }
+//   })
+//   return isSame;
+// }
+// const checkIfNumbersAreSame = numbers => [...new Set(numbers)].length === 1;
+
+// const checkIfNumbersAreSame = numbers => numbers.every((el, i, arr) => arr[0] === el);
+
+// console.log(checkIfNumbersAreSame(numsArr));
+
+// Array.prototype.checkIfNumbersAreSame = function () {
+//   for (let i = 0; i < this.length; i += 1) {
+//     if (this[0] !== this[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(numsArr.checkIfNumbersAreSame())
+
+// console.log(Object.getOwnPropertyNames(Array.prototype));
+
+const obj = {
+  temp: 30,
+  windSpeed: 13,
+}
+
+const renameObjKeys = obj => {
+  obj.forIn(el => {
+
+  })
+}
+
+console.log(renameObjKeys(obj));
