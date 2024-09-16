@@ -749,3 +749,19 @@ const movie = {
 // }
 
 // console.log(swapValues(str, "9", "0"));
+
+const boomRangsArr = [2, 7, 2, 1, 1, 5, 1, 2, 2, -2, 2];
+
+const countboomRangs = arr => {
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] !== arr[i + 1] && arr[i] === arr[i + 2]) {
+      count += 1;
+    }
+  }
+
+  return count;
+}
+
+console.log(countboomRangs(boomRangsArr));
