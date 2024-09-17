@@ -750,18 +750,82 @@ const movie = {
 
 // console.log(swapValues(str, "9", "0"));
 
-const boomRangsArr = [2, 7, 2, 1, 1, 5, 1, 2, 2, -2, 2];
+// const boomRangsArr = [2, 7, 2, 1, 1, 5, 1, 2, 2, -2, 2];
 
-const countboomRangs = arr => {
-  let count = 0;
+// const countboomRangs = arr => {
+//   let count = 0;
 
-  for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] !== arr[i + 1] && arr[i] === arr[i + 2]) {
-      count += 1;
-    }
-  }
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] !== arr[i + 1] && arr[i] === arr[i + 2]) {
+//       count += 1;
+//     }
+//   }
 
-  return count;
+//   return count;
+// }
+
+// console.log(countboomRangs(boomRangsArr));
+
+
+// const memoizedValues = {};
+
+// const normalMultiplyBy5 = num => {
+//   if (num in memoizedValues) {
+//     return memoizedValues[num];
+//   } else {
+//     memoizedValues[num] = num * 5;
+//     return memoizedValues[num];
+//   }
+
+// }
+
+// console.log(normalMultiplyBy5(2));
+// console.log(normalMultiplyBy5(2));
+// console.log(normalMultiplyBy5(3));
+// console.log(normalMultiplyBy5(4));
+
+// const numbers = [2, 3, 4, 5];
+
+// numbers.forEach(el => el * 2);
+// console.log(numbers)
+
+
+const multiplyBy2 = (number, cb) => {
+  // return setTimeout(() => {
+  //   cb(number * 2);
+  // }, 1000)
+
+  const promise = new Promise((resolve, reject) => {
+    return setTimeout(() => {
+      resolve(number * 2);
+    }, 1000)
+  })
+
+  return promise;
+
 }
 
-console.log(countboomRangs(boomRangsArr));
+const keepMultiplying = async num => {
+  // multiplyBy2(num, (result1) => {
+  //   multiplyBy2(result1, result2 => {
+  //     multiplyBy2(result2, result3 => {
+  //       console.log(result3);
+  //     })
+  //   })
+  // });
+
+  // multiplyBy2(num).then(result1 => multiplyBy2(result1)
+  //   .then(result2 => multiplyBy2(result2))
+  //   .then(result3 => multiplyBy2(result3))
+  //   .then(result4 => console.log(result4))
+  // );
+
+  const result1 = await multiplyBy2(num);
+  const result2 = await multiplyBy2(result1);
+  const result3 = await multiplyBy2(result2);
+  const result4 = await multiplyBy2(result3);
+  console.log(result4);
+
+}
+
+keepMultiplying(10);
