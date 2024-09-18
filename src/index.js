@@ -790,42 +790,42 @@ const movie = {
 // console.log(numbers)
 
 
-const multiplyBy2 = (number, cb) => {
-  // return setTimeout(() => {
-  //   cb(number * 2);
-  // }, 1000)
+// const multiplyBy2 = (number, cb) => {
+// return setTimeout(() => {
+//   cb(number * 2);
+// }, 1000)
 
-  const promise = new Promise((resolve, reject) => {
-    return setTimeout(() => {
-      resolve(number * 2);
-    }, 1000)
-  })
+//   const promise = new Promise((resolve, reject) => {
+//     return setTimeout(() => {
+//       resolve(number * 2);
+//     }, 1000)
+//   })
 
-  return promise;
+//   return promise;
 
-}
+// }
 
-const keepMultiplying = async num => {
-  // multiplyBy2(num, (result1) => {
-  //   multiplyBy2(result1, result2 => {
-  //     multiplyBy2(result2, result3 => {
-  //       console.log(result3);
-  //     })
-  //   })
-  // });
+// const keepMultiplying = async num => {
+// multiplyBy2(num, (result1) => {
+//   multiplyBy2(result1, result2 => {
+//     multiplyBy2(result2, result3 => {
+//       console.log(result3);
+//     })
+//   })
+// });
 
-  // multiplyBy2(num).then(result1 => multiplyBy2(result1)
-  //   .then(result2 => multiplyBy2(result2))
-  //   .then(result3 => multiplyBy2(result3))
-  //   .then(result4 => console.log(result4))
-  // );
+// multiplyBy2(num).then(result1 => multiplyBy2(result1)
+//   .then(result2 => multiplyBy2(result2))
+//   .then(result3 => multiplyBy2(result3))
+//   .then(result4 => console.log(result4))
+// );
 
-  const result1 = await multiplyBy2(num);
-  const result2 = await multiplyBy2(result1);
-  const result3 = await multiplyBy2(result2);
-  const result4 = await multiplyBy2(result3);
-  console.log(result4);
+//   const result1 = await multiplyBy2(num);
+//   const result2 = await multiplyBy2(result1);
+//   const result3 = await multiplyBy2(result2);
+//   const result4 = await multiplyBy2(result3);
+//   console.log(result4);
 
-}
+// }
 
-keepMultiplying(10);
+// keepMultiplying(10);
