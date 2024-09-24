@@ -829,3 +829,27 @@ const movie = {
 // }
 
 // keepMultiplying(10);
+// let price = 0;
+// const subscription = "pro";
+
+// if (subscription === "pro") {
+//   price = 100;
+// }
+
+// console.log(price); // 100
+
+// let price = 0;
+// const subscription = "free";
+
+// if (subscription === "pro") {
+//   price = 100;
+// }
+
+// console.log(price); // 0
+
+// const arr = [1, 2, 3, 4];
+
+// const res = arr.map((el) => el * 2);
+// console.log(res);
+// const res2 = arr.forEach((el, index, array) => (array[index] = el * 4));
+// console.log(arr);
