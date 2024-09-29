@@ -964,3 +964,7 @@ const movie = {
 //     status: "all",
 //   },
 // };
+
+// const a = [];
+
+// console.log(Array.isArray(a));
