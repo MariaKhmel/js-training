@@ -969,4 +969,9 @@ const movie = {
 
 // console.log(Array.isArray(a));
 
-// map foreach  filter some every reduce toSorted 
+// map foreach  filter some every reduce toSorted
+
+
+// (function testF() {
+//   console.log('hello')
+// }())
