@@ -975,3 +975,13 @@ const movie = {
 // (function testF() {
 //   console.log('hello')
 // }())
+
+// export const tasksReducer = createReducer(tasksInitialState, builder => {
+//   builder.addCase(deleteTask, (state, action) => {
+//
+//     // state.filter(task => task.id !== action.payload)
+
+//
+//     return state.filter(task => task.id !== action.payload);
+//   });
+// });
