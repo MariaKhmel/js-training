@@ -1021,3 +1021,15 @@ const input2 = { a: 2, e: 12, f: 6, d: 10 };
 // })
 
 // console.log(output);
+
+
+const output = Object.keys(input1)
+  .filter(key => input1[key] === input2[key])
+  .reduce((acc, key) => {
+    acc[key] = input1[key];
+    return acc;
+  }, {});
+
+console.log(output);
+
+
