@@ -1000,8 +1000,8 @@ const movie = {
 
 // console.log(output)
 
-const input1 = { a: 1, b: 2, c: 3, d: 10, e: 12 };
-const input2 = { a: 2, e: 12, f: 6, d: 10 };
+// const input1 = { a: 1, b: 2, c: 3, d: 10, e: 12 };
+// const input2 = { a: 2, e: 12, f: 6, d: 10 };
 // const output = {};
 
 // const input1Keys = Object.keys(input1);
@@ -1023,13 +1023,34 @@ const input2 = { a: 2, e: 12, f: 6, d: 10 };
 // console.log(output);
 
 
-const output = Object.keys(input1)
-  .filter(key => input1[key] === input2[key])
-  .reduce((acc, key) => {
-    acc[key] = input1[key];
+// const output = Object.keys(input1)
+//   .filter(key => input1[key] === input2[key])
+//   .reduce((acc, key) => {
+//     acc[key] = input1[key];
+//     return acc;
+//   }, {});
+
+// console.log(output);
+
+
+const input = [1, 2, -2, 11, 7, 1];
+// const output = 7;
+
+const input1 = [1, 4, 7, 2, 4, 7];
+// const output1 = 4;
+
+const findSecondLargestNum = arr => {
+  const sortedArr = arr.toSorted((el1, el2) => el2 - el1);
+  // const uniquesValuesArr = ([...new Set(sortedArr)]);
+  // const uniquesValuesArr = sortedArr.filter((el, index, array) => array.indexOf(el) === index);
+  const uniquesValuesArr = sortedArr.reduce((acc, currentEl) => {
+    if (!acc.includes(currentEl)) {
+      acc.push(currentEl);
+    }
     return acc;
-  }, {});
+  }, [])
+  return uniquesValuesArr[1];
+}
 
-console.log(output);
-
-
+console.log(findSecondLargestNum(input));
+console.log(findSecondLargestNum(input1));
