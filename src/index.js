@@ -999,3 +999,25 @@ const movie = {
 // })
 
 // console.log(output)
+
+const input1 = { a: 1, b: 2, c: 3, d: 10, e: 12 };
+const input2 = { a: 2, e: 12, f: 6, d: 10 };
+// const output = {};
+
+// const input1Keys = Object.keys(input1);
+// const input2Keys = Object.keys(input2);
+
+// const commonKeys = [];
+// input1Keys.forEach(el => {
+//   if (input2Keys.includes(el)) {
+//     commonKeys.push(el);
+//   }
+// })
+
+// commonKeys.forEach(el => {
+//   if (input1[el] === input2[el]) {
+//     output[el] = input1[el];
+//   }
+// })
+
+// console.log(output);
