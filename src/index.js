@@ -985,3 +985,17 @@ const movie = {
 //     return state.filter(task => task.id !== action.payload);
 //   });
 // });
+
+// const input = [2, 7, 11, 4, -2];
+
+// const output = input.map((el, index, array) => {
+//   return array.reduce((acc, currentEl, currentIndex) => {
+//     if (currentIndex !== index) {
+//       return acc += currentEl;
+//     } else {
+//       return acc;
+//     }
+//   }, 0)
+// })
+
+// console.log(output)
