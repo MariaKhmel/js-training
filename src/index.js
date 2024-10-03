@@ -1033,24 +1033,24 @@ const movie = {
 // console.log(output);
 
 
-const input = [1, 2, -2, 11, 7, 1];
+// const input = [1, 2, -2, 11, 7, 1];
 // const output = 7;
 
-const input1 = [1, 4, 7, 2, 4, 7];
+// const input1 = [1, 4, 7, 2, 4, 7];
 // const output1 = 4;
 
-const findSecondLargestNum = arr => {
-  const sortedArr = arr.toSorted((el1, el2) => el2 - el1);
-  // const uniquesValuesArr = ([...new Set(sortedArr)]);
-  // const uniquesValuesArr = sortedArr.filter((el, index, array) => array.indexOf(el) === index);
-  const uniquesValuesArr = sortedArr.reduce((acc, currentEl) => {
-    if (!acc.includes(currentEl)) {
-      acc.push(currentEl);
-    }
-    return acc;
-  }, [])
-  return uniquesValuesArr[1];
-}
+// const findSecondLargestNum = arr => {
+//   const sortedArr = arr.toSorted((el1, el2) => el2 - el1);
+// const uniquesValuesArr = ([...new Set(sortedArr)]);
+// const uniquesValuesArr = sortedArr.filter((el, index, array) => array.indexOf(el) === index);
+//   const uniquesValuesArr = sortedArr.reduce((acc, currentEl) => {
+//     if (!acc.includes(currentEl)) {
+//       acc.push(currentEl);
+//     }
+//     return acc;
+//   }, [])
+//   return uniquesValuesArr[1];
+// }
 
-console.log(findSecondLargestNum(input));
-console.log(findSecondLargestNum(input1));
+// console.log(findSecondLargestNum(input));
+// console.log(findSecondLargestNum(input1));
