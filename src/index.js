@@ -1054,3 +1054,10 @@ const movie = {
 
 // console.log(findSecondLargestNum(input));
 // console.log(findSecondLargestNum(input1));
+
+// const output = Object.keys(input1)
+//   .filter(key => input1[key] === input2[key])
+//   .reduce((acc, key) => {
+//     acc[key] = input1[key];
+//     return acc;
+//   }, {});
