@@ -19,7 +19,7 @@
 //   },
 // ];
 
-import { Children } from "react";
+
 
 // const newUsers = [
 //   {
@@ -1061,3 +1061,24 @@ const movie = {
 //     acc[key] = input1[key];
 //     return acc;
 //   }, {});
+
+// const users = [
+//   {
+//     id: 1,
+//     name: "Jack",
+//     isActive: true,
+//     age: 20,
+//   },
+//   {
+//     id: 2,
+//     name: "John",
+//     isActive: true,
+//     age: 18,
+//   },
+//   {
+//     id: 3,
+//     name: "Mike",
+//     isActive: false,
+//     age: 30,
+//   },
+// ];
