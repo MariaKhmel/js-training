@@ -1062,26 +1062,7 @@ const movie = {
 //     return acc;
 //   }, {});
 
-// const users = [
-//   {
-//     id: 1,
-//     name: "Jack",
-//     isActive: true,
-//     age: 20,
-//   },
-//   {
-//     id: 2,
-//     name: "John",
-//     isActive: true,
-//     age: 18,
-//   },
-//   {
-//     id: 3,
-//     name: "Mike",
-//     isActive: false,
-//     age: 30,
-//   },
-// ];
+
 // const countNegativeNums = (arr) => {
 //   return arr.reduce((acc, curr) => curr < 0 ? acc + 1 : acc, 0);
 // }
