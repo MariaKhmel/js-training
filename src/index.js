@@ -1082,3 +1082,26 @@ const movie = {
 //     age: 30,
 //   },
 // ];
+// const countNegativeNums = (arr) => {
+//   return arr.reduce((acc, curr) => curr < 0 ? acc + 1 : acc, 0);
+// }
+
+// const countNegativeNums = (arr) => {
+//   const negativeNymbers = arr.filter(el => el < 0);
+//   return negativeNymbers.length;
+// }
+// console.log(countNegativeNums(numbers));
+
+// const numsArr = [10, 10, 10, 10];
+
+// const checkIfNumbersAreSame = numbers => {
+//   let isSame = true;
+//   numbers.forEach((el, index, array) => {
+//     const nextIdx = index + 1;
+//     if (array[nextIdx] && el !== array[nextIdx]) {
+//       isSame = false;
+//     }
+//   })
+//   return isSame;
+// }
+// const checkIfNumbersAreSame = numbers => [...new Set(numbers)].length === 1;
