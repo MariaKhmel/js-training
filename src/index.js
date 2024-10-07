@@ -1087,3 +1087,6 @@ const movie = {
 // }
 // const checkIfNumbersAreSame = numbers => [...new Set(numbers)].length === 1;
 
+const testF = function () {
+  console.log('testF');
+}
