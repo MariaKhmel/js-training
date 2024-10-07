@@ -1195,3 +1195,11 @@ const movie = {
 // }
 
 // console.log(findMissingOddNum(input));
+
+// const str = 'This is Javascript Code';
+
+// console.log(str.split('').reverse().join(''));
+// console.log(str)
+// const arr = [1, 33, 4];
+// console.log(arr.toReversed());
+// console.log(arr)
