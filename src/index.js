@@ -1138,4 +1138,19 @@ const movie = {
 // console.log(multiply(5, 2))
 // console.log(multiply(2)(4))
 
+// const curriedAdd = x => {
+//   return y => {
+//     return z => {
+//       return x + y + z;
+//     }
+//   }
+// }
+// console.log(curriedAdd(1)(2)(3));
 
+// const multiply = num1 => num2 => num1 * num2;
+
+// const double = multiply(2);
+// const triple = multiply(3);
+
+// console.log(double(2));
+// console.log(triple(2))
