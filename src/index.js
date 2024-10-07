@@ -1170,13 +1170,28 @@ const movie = {
 
 // const findMissingOddNum = arr => {
 //   let oddNum = arr[0] + 2;
-//   input.forEach(el => {
-//     if (!el === oddNum) {
+//   arr.forEach(el => {
+//     if (el !== oddNum) {
 //       oddNum = el;
 //     }
 
 //   })
 //   return oddNum;
+// }
+
+// console.log(findMissingOddNum(input));
+
+
+// const input = [5, 7, 9, 11, 15, 17];
+
+// const findMissingOddNum = arr => {
+//   return arr.reduce((acc, el) => {
+//     if (acc !== el) {
+//       acc == el;
+//       return acc;
+//     }
+//     return acc + 2;
+//   }, input[0])
 // }
 
 // console.log(findMissingOddNum(input));
