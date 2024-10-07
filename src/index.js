@@ -1087,6 +1087,25 @@ const movie = {
 // }
 // const checkIfNumbersAreSame = numbers => [...new Set(numbers)].length === 1;
 
-const testF = function () {
-  console.log('testF');
+// const testF = function () {
+//   console.log('testF');
+// }
+
+const createCounter = () => {
+  let count = 0;
+
+  const getCurrentCount = () => {
+    return count;
+  }
+
+  const increment = () => count += 1;
+
+  return { increment, getCurrentCount };
+
 }
+
+const counter1 = createCounter();
+console.log(counter1)
+console.log(counter1.getCurrentCount());
+console.log(counter1.increment());
+console.log(counter1.getCurrentCount());
