@@ -1154,3 +1154,14 @@ const movie = {
 
 // console.log(double(2));
 // console.log(triple(2))
+
+// const multiply = (num1, num2) => {
+//   if (num2) {
+//     return num1 * num2;
+//   }
+
+//   return num3 => num1 * num3;
+// }
+
+// console.log(multiply(2, 2));
+// console.log(multiply(2)(4));
