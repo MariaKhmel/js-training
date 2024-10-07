@@ -1165,3 +1165,18 @@ const movie = {
 
 // console.log(multiply(2, 2));
 // console.log(multiply(2)(4));
+
+// const input = [5, 7, 9, 11, 15, 17];
+
+// const findMissingOddNum = arr => {
+//   let oddNum = arr[0] + 2;
+//   input.forEach(el => {
+//     if (!el === oddNum) {
+//       oddNum = el;
+//     }
+
+//   })
+//   return oddNum;
+// }
+
+// console.log(findMissingOddNum(input));
