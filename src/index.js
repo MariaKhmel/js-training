@@ -1091,21 +1091,37 @@ const movie = {
 //   console.log('testF');
 // }
 
-const createCounter = () => {
-  let count = 0;
+// const createCounter = () => {
+//   let count = 0;
 
-  const getCurrentCount = () => {
-    return count;
-  }
+//   const getCurrentCount = () => {
+//     return count;
+//   }
 
-  const increment = () => count += 1;
+//   const increment = () => count += 1;
 
-  return { increment, getCurrentCount };
+//   return { increment, getCurrentCount };
 
-}
+// }
 
-const counter1 = createCounter();
-console.log(counter1)
-console.log(counter1.getCurrentCount());
-console.log(counter1.increment());
-console.log(counter1.getCurrentCount());
+// const counter1 = createCounter();
+// console.log(counter1)
+// console.log(counter1.getCurrentCount());
+// console.log(counter1.increment());
+// console.log(counter1.getCurrentCount());
+
+// const arr = [1, 2, 4, 5];
+
+// const tst = arr.find(el => el === 3)
+
+// const animals = ['gof', 'dog', 'cat'];
+
+// const filterAnimals = (animals, filteringFunc) => {
+//   const res = filteringFunc(animals);
+//   return res;
+// }
+
+
+// const filterByValue = el => el === 'cat';
+
+// console.log(filterAnimals(animals, filterByValue));
