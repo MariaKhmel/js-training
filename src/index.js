@@ -1126,17 +1126,16 @@ const movie = {
 
 // console.log(filterAnimals(animals, filterByValue));
 
-const multiply = (num1, num2) => {
-  if (num2) {
-    return num1 * num2;
-  }
-  return (num3) => {
-    return multiply(num1, num3)
-      ;
-  }
-}
+// const multiply = (num1, num2) => {
+//   if (num2) {
+//     return num1 * num2;
+//   }
+//   return (num3) => {
+//     return multiply(num1, num3);
+//   }
+// }
 
-console.log(multiply(5, 2))
-console.log(multiply(2)(4))
+// console.log(multiply(5, 2))
+// console.log(multiply(2)(4))
 
 
