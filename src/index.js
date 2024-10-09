@@ -1203,3 +1203,42 @@ const movie = {
 // const arr = [1, 33, 4];
 // console.log(arr.toReversed());
 // console.log(arr)
+
+// const str = 'This is Javascript Code';
+// String.prototype.reverse = function () {
+//   return this.split('').reverse().join('');
+// }
+
+// console.log(str.reverse());
+
+
+// const fetchUsers = async () => {
+//   const baseUrl = 'baseUrl';
+//   const userIds = [1, 3, 4];
+
+//   const promiseArr = userIds.map(async id => {
+//     const res = await fetchUsers(`ffjjf`);
+//     return res.json();
+
+//   })
+
+//   const users = await Promise.all(promiseArr);
+//   console.log(users)
+// }
+
+// const fetchUsers = async () => {
+//   const baseUrl = "https://jsonplaceholder.typicode.com";
+//   const userIds = [1, 2, 3];
+
+//   // 1. Create an array of promises
+//   const arrayOfPromises = userIds.map(async userId => {
+//     const response = await fetch(`${baseUrl}/users/${userId}`);
+//     return response.json();
+//   });
+
+//   // 2. Run all promises in parallel and wait for their completion
+//   const users = await Promise.all(arrayOfPromises);
+//   console.log(users);
+// };
+
+// fetchUsers();
