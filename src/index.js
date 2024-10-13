@@ -1311,23 +1311,41 @@ const movie = {
 
 // btn.addEventListener("click", mango.showUsername);
 
-function showThis() {
-  console.log("this in showThis: ", this);
-}
+// function showThis() {
+//   console.log("this in showThis: ", this);
+// }
 
-const user = {
-  username: "Mango",
-};
+// const user = {
+//   username: "Mango",
+// };
 
 // Writing a reference to the function to the object property
 // Note that this is not a call because it has no ()
-user.showContext = showThis;
+// user.showContext = showThis;
 
 // Calling the function in the object context
 // this will point to the current object that serves as the
 // call context, not to the global object.
-user.showContext(); // this in showThis: {username: "Mango", showContext: ƒ}
+// user.showContext();
+// this in showThis: {username: "Mango", showContext: ƒ}
 
 
-const message = "Welcome to Bahamas!";
-console.log(message.indexOf('Welcome'))
+// const message = "Welcome to Bahamas!";
+// console.log(message.indexOf('Welcome'))
+
+// const makeCounter = () => {
+//   let counter = 0;
+
+//   return {
+//     getCounterValue: () => {
+//       return counter;
+//     },
+//     increaseCounter: () => {
+//       return counter += 1;
+//     }
+//   }
+// }
+
+// const counter1 = makeCounter();
+// console.log(counter1.getCounterValue())
+// console.log(counter1.increaseCounter())
