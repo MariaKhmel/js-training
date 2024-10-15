@@ -1361,3 +1361,13 @@ const movie = {
 
 // console.log(calculateTotalSum(1, 3))
 // console.log(calculateTotalSum(2)(3));
+
+// const str = 'This is JavaScript Code';
+
+// const arrOfStr = str.split(' ');
+
+
+// const reverseStr = arrOfStr.map(item => item.split('').reverse().join(''));
+
+
+// console.log(reverseStr);
