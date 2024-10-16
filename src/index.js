@@ -1367,3 +1367,52 @@ const movie = {
 // const result = arrOfStr.map(item => item.split('').reverse().join('')).join(' ');
 
 // console.log(result);
+
+// const str = 'This is the code to find the max char';
+
+// const arrofStr = str.split('');
+
+// const arr = arrofStr.reduce((acc, el) => {
+//   return Object.keys(acc).includes(el.toLowerCase()) ?
+//     { ...acc, [el.toLowerCase()]: acc[el.toLowerCase()] += 1 } :
+//     { ...acc, [el.toLowerCase()]: 1 }
+
+// }, {})
+
+// const count = Object.entries(arr).sort((a, b) => b[1] - a[1])
+// console.log(count)
+// String.prototype.reverse = function () {
+//   return this.split('').reverse().join('');
+
+// }
+
+// const str = 'ffffddewscvs';
+// console.log(str.reverse())
+
+// const input = [2, 7, 11, 4, -2]
+// let output = [20, 15, 11, 18, 24]
+
+// let sum = input.reduce((acc, el) => acc + el)
+
+// let totalsum = []
+
+// for (const value of input) {
+
+//   totalsum.push(sum - value)
+// }
+
+
+// console.log(totalsum);
+
+
+// const input = [2, 7, 11, 4, -2]
+// let output = [20, 15, 11, 18, 24]
+
+
+// const sum = input.reduce((acc, el) => acc + el);
+
+// let totalsum = [];
+
+
+// input.map(el => totalsum.push(sum - el));
+// console.log(totalsum)
