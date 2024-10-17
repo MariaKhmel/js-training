@@ -1416,3 +1416,11 @@ const movie = {
 
 // input.map(el => totalsum.push(sum - el));
 // console.log(totalsum)
+
+// const greet = () => {
+//   console.log("Hello!");
+// };
+
+// const intervalId = setInterval(greet, 3000);
+
+// clearInterval(intervalId);
