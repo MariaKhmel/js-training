@@ -1458,3 +1458,14 @@ const movie = {
 //   delay: 2000,
 //   shouldResolve: true
 // })
+// const makePromise = ({ value, delay, shouldResolve = true }) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (shouldResolve) {
+//         resolve(value)
+//       } else {
+//         reject(value)
+//       }
+//     }, delay);
+//   });
+// };
