@@ -1449,3 +1449,12 @@ const movie = {
 //   .finally(() => {
 //     console.log("finally");
 //   });
+// const makePromise = options => {
+//   // ...
+// };
+
+// makePromise({
+//   value: "Some value",
+//   delay: 2000,
+//   shouldResolve: true
+// })
