@@ -1482,3 +1482,9 @@ const movie = {
 //   .map(student => student.name);
 
 // console.log(names);
+
+
+// const sortedByAscendingScore = students.toSorted((a, b) => a.score - b.score);
+// const names = sortedByAscendingScore.map(student => student.name);
+
+// console.log(names); // ["Ajax", "Poly", "Mango", "Kiwi"]
