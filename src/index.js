@@ -1493,4 +1493,16 @@ const movie = {
 //   .filter((course, index, array) => array.indexOf(course) === index)
 //   .toSorted((a, b) => a.localeCompare(b));
 
-// console.log(uniqueSortedCourses); 
+// console.log(uniqueSortedCourses);
+
+// const colorPickerOptions = [
+//   { label: "red", color: "#F44336" },
+//   { label: "green", color: "#4CAF50" },
+//   { label: "blue", color: "#2196F3" },
+//   { label: "pink", color: "#E91E63" },
+//   { label: "indigo", color: "#3F51B5" },
+// ];
+
+// colorPickerOptions.find((option) => option.label === "blue");
+// colorPickerOptions.find((option) => option.label === "pink");
+// colorPickerOptions.find((option) => option.label === "white");
