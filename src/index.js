@@ -1553,7 +1553,7 @@ const movie = {
 //   return n * factorial(n - 1);
 // }
 
-// console.log(factorial(5)); 
+// console.log(factorial(5));
 
 // const foo = async () => {
 //   console.log("Before await");
@@ -1563,11 +1563,11 @@ const movie = {
 //   });
 
 //   console.log("After await", promiseValue);
-};
-const fetchUsers = () => {
-  axios.get("https://jsonplaceholder.typicode.com/users")
-    .then(response => {
-      console.log(response.data);
-    });
-};
+// };
+// const fetchUsers = () => {
+//   axios.get("https://jsonplaceholder.typicode.com/users")
+//     .then(response => {
+//       console.log(response.data);
+//     });
+// };
 
