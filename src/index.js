@@ -1564,5 +1564,10 @@ const movie = {
 
 //   console.log("After await", promiseValue);
 };
+const fetchUsers = () => {
+  axios.get("https://jsonplaceholder.typicode.com/users")
+    .then(response => {
+      console.log(response.data);
+    });
+};
 
-/ / / через 2 секунди виведеться в консоль  "After await" 5
