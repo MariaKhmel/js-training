@@ -1578,3 +1578,17 @@ const movie = {
 
 // fetchUsers()
 //   .then(users => console.log(users));
+// if (page > totalPages) {
+//   return iziToast.error({
+//     position: "topRight",
+//     message: "We're sorry, there are no more posts to load"
+//   });
+// }
+// // Контролює кількість елементів в групі
+// let limit = 30;
+// // Кількість груп в колекції
+// const totalPages = Math.ceil(100 / limit);
+// const fetchPosts = async () => {
+//   const response = await axios.get("https://jsonplaceholder.typicode.com/posts?_limit=5&_page=3");
+//   console.log("Posts: ", response.data);
+// };
