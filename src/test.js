@@ -30,8 +30,28 @@
 // console.log(counter.increment());
 // console.log(counter.increment())
 
-function removeDuplicates(arr) {
-  return [...new Set(arr)];
+// function removeDuplicates(arr) {
+//   return [...new Set(arr)];
+// }
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4]))
+// removeDuplicates([1, 2, 2, 3, 4, 4]);
+
+function secondSymbol(s, symbol) {
+  return s.split('').findIndex((char, index) => {
+    let firstOccuranceIndex;
+    if (char === symbol) {
+      firstOccuranceIndex = index;
+    }
+    console.log(firstOccuranceIndex, index)
+    if (char === symbol && index > firstOccuranceIndex) {
+      return index;
+    }
+
+
+  });
+
 }
-console.log(removeDuplicates([1, 2, 2, 3, 4, 4]))
-removeDuplicates([1, 2, 2, 3, 4, 4]); // Expected output: [1, 2, 3, 4]
+
+console.log(secondSymbol('Hello world!!!', 'l'))
+console.log(secondSymbol('Hello world!!!', 'o'))
+console.log(secondSymbol('Hello world!!!', 'A'))
