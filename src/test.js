@@ -36,21 +36,22 @@
 // console.log(removeDuplicates([1, 2, 2, 3, 4, 4]))
 // removeDuplicates([1, 2, 2, 3, 4, 4]);
 
-function secondSymbol(s, symbol) {
-  return s.split('').findIndex((char, index) => {
-    let firstOccuranceIndex;
-    if (char === symbol) {
-      firstOccuranceIndex = index;
-    }
-    console.log(firstOccuranceIndex, index)
-    if (char === symbol && index > firstOccuranceIndex) {
-      return index;
-    }
+// function secondSymbol(s, symbol) {
+//   let firstOccuranceIndex;
+//   return s.split('').findIndex((char) => {
 
+//     if (char === symbol) {
+//       if (firstOccuranceIndex) {
+//         return true;
+//       }
+//       firstOccuranceIndex = true;
+//     }
 
-  });
+//     return false;
 
-}
+//   });
+
+// }
 
 console.log(secondSymbol('Hello world!!!', 'l'))
 console.log(secondSymbol('Hello world!!!', 'o'))
