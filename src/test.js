@@ -53,8 +53,8 @@
 
 // }
 
-const secondSymbol = (s, symbol) => s.indexOf(symbol, s.indexOf(symbol) + 1);
+// const secondSymbol = (s, symbol) => s.indexOf(symbol, s.indexOf(symbol) + 1);
 
-console.log(secondSymbol('Hello world!!!', 'l'))
-console.log(secondSymbol('Hello world!!!', 'o'))
-console.log(secondSymbol('Hello world!!!', 'A'))
+// console.log(secondSymbol('Hello world!!!', 'l'))
+// console.log(secondSymbol('Hello world!!!', 'o'))
+// console.log(secondSymbol('Hello world!!!', 'A'))
