@@ -31,7 +31,7 @@
 // console.log(counter.increment())
 
 function removeDuplicates(arr) {
-  return arr.filter((el, index, arr) => arr.indexOf(el) === index);
+  return [...new Set(arr)];
 }
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4]))
 removeDuplicates([1, 2, 2, 3, 4, 4]); // Expected output: [1, 2, 3, 4]
