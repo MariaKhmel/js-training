@@ -80,18 +80,3 @@
 // console.log(likes(['Max', 'John', 'Mark']));
 // console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
 
-// weights array - is golden ore pieces weights
-// n - is the weight of figurine
-//
-// return an array describing the left and right scale pans, 
-// prepared to test that the figurine (possibly weighing n) 
-// placed on the right pan afterward will balance the scales
-function weightN(weights, n) {
-
-  // for this example, let's assume there are at least 3 ore pieces
-
-  const left = [weights[0], weights[2]];
-  const right = [weights[1]];
-
-  return [left, right];
-}
