@@ -52,3 +52,13 @@
 
 
 
+// function orderWeight(strng) {
+//   const arr = strng.split(' ');
+//   const weightWithSums = arr.map((el) => {
+//     const sum = [...el].reduce((acc, num) => acc += Number(num), 0);
+//     return { value: el, digitSum: sum }
+//   })
+//   const sortedSums = weightWithSums.toSorted((a, b) => a.digitSum - b.digitSum);
+//   return sortedSums.map(el => el.value);
+
+// }
