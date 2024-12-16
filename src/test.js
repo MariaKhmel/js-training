@@ -59,4 +59,15 @@
 // console.log(orderWeight("103 123 4444 99 2000"))
 // console.log(orderWeight("2000 10003 1234000 44444444 9999 11 11 22 123"))
 
-console.log((0.1 * 10 + 0.2 * 10) / 10)
+// console.log((0.1 * 10 + 0.2 * 10) / 10)
+
+// for (let i = 0; i < 10; i += 1) {
+//   console.log(i);
+
+//   if (i === 5) {
+//     console.log('Met the number 5, interrupt the execution of the cycle');
+//     break;
+//   }
+// }
+
+// console.log('Log after cycle');
