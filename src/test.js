@@ -80,26 +80,44 @@
 
 // sum(2, 5);
 
-const bookShelf = {
-  books: [
-    { title: "The Last Kingdom", rating: 8 },
-    { title: "The Mist", rating: 6 },
-  ],
-  getAvarageRating() {
-    let totalRating = 0;
-    for (const book of this.books) {
-      totalRating += book.rating;
-    }
-    return totalRating / this.books.length;
-  },
-  changeRating(bookName, newRating) {
-    for (const book of this.books) {
-      if (book.title === bookName) {
-        book.rating = newRating;
-      }
-    }
-  },
-};
+// const bookShelf = {
+//   books: [
+//     { title: "The Last Kingdom", rating: 8 },
+//     { title: "The Mist", rating: 6 },
+//   ],
+//   getAvarageRating() {
+//     let totalRating = 0;
+//     for (const book of this.books) {
+//       totalRating += book.rating;
+//     }
+//     return totalRating / this.books.length;
+//   },
+//   changeRating(bookName, newRating) {
+//     for (const book of this.books) {
+//       if (book.title === bookName) {
+//         book.rating = newRating;
+//       }
+//     }
+//   },
+// };
 // console.log(bookShelf.getAvarageRating())
 // bookShelf.getAvarageRating(); // 7
 // bookShelf.changeRating("The Mist", 4)
+// function greet(name) {
+//   console.log(`Welcome ${name}!`);
+// }
+
+// function notify(name) {
+//   console.log(`Dear ${name}, your room will be ready in 30 minutes`);
+// }
+
+// function registerGuest(name, callback) {
+//   console.log(`Registering ${name}!`);
+//   callback(name);
+// }
+
+// registerGuest("Mango", greet); // "Registering Mango!"
+// // "Welcome Mango!"
+
+// registerGuest("Mango", notify); // "Registering Mango!"
+// // "Dear Mango, your room will be ready in 30 minutes"
