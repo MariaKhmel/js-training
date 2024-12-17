@@ -71,3 +71,27 @@
 // }
 
 // console.log('Log after cycle');
+
+// function sum(a, b) {
+//   const res = arguments;
+//   console.log(res)
+//   return a + b;
+// }
+
+// sum(2, 5);
+
+// const bookShelf = {
+//   books: [
+//     { title: "The Last Kingdom", rating: 8 },
+//     { title: "The Mist", rating: 6 },
+//   ],
+//   getAvarageRating() {
+//     let totalRating = 0;
+//     for (const book of this.books) {
+//       totalRating += book.rating;
+//     }
+//     return totalRating / this.books.length;
+//   },
+// };
+// console.log(bookShelf.getAvarageRating())
+// bookShelf.getAvarageRating(); // 7
