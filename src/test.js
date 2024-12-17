@@ -80,18 +80,26 @@
 
 // sum(2, 5);
 
-// const bookShelf = {
-//   books: [
-//     { title: "The Last Kingdom", rating: 8 },
-//     { title: "The Mist", rating: 6 },
-//   ],
-//   getAvarageRating() {
-//     let totalRating = 0;
-//     for (const book of this.books) {
-//       totalRating += book.rating;
-//     }
-//     return totalRating / this.books.length;
-//   },
-// };
+const bookShelf = {
+  books: [
+    { title: "The Last Kingdom", rating: 8 },
+    { title: "The Mist", rating: 6 },
+  ],
+  getAvarageRating() {
+    let totalRating = 0;
+    for (const book of this.books) {
+      totalRating += book.rating;
+    }
+    return totalRating / this.books.length;
+  },
+  changeRating(bookName, newRating) {
+    for (const book of this.books) {
+      if (book.title === bookName) {
+        book.rating = newRating;
+      }
+    }
+  },
+};
 // console.log(bookShelf.getAvarageRating())
 // bookShelf.getAvarageRating(); // 7
+// bookShelf.changeRating("The Mist", 4)
