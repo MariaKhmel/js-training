@@ -135,3 +135,33 @@
 //   .toSorted((a, b) => a.localeCompare(b));
 
 // console.log(uniqueCourses)
+
+// [[Prototype]]
+
+// const animal = {
+//   legs: 4
+// }
+
+// const dog = Object.create(animal);
+// dog.name = 'Tob';
+// console.log(dog);
+// console.log(dog.legs)
+// console.log(dog.hasOwnProperty("legs"));
+
+class User {
+  constructor(params) {
+    this.name = params.name;
+    this.title = params.title;
+  }
+
+  getName() {
+    return this.name;
+  }
+
+  changeName(newName) {
+    this.name = newName;
+  }
+}
+
+const admin = new User({ name: 'T', title: 'admin' });
+console.log(admin)
