@@ -207,3 +207,20 @@
 // console.log(User.prototype);
 // const editor = new ContentEditor({ name: 'ggg', title: 'ggg', email: 'ggg' })
 // console.log(editor)
+
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
+// }
+
+// class Editor extends User {
+
+//   constructor({ email, posts }) {
+//     super(email);
+//     this.posts = posts;
+//   }
+// }
+
+// const editor = new Editor({ email: 'email&f', posts: [] });
+// console.log(editor)
