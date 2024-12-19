@@ -151,6 +151,7 @@
 
 class User {
   #email;
+  static role = 'admin';
 
   constructor(params) {
     this.name = params.name;
@@ -185,8 +186,17 @@ class User {
   set email(newEmail) {
     this.#email = newEmail;
   }
+
+
 }
 
+
+class ContentEditor extends User {
+  constructor(params) {
+    super(params)
+    this.posts = params.posts;
+  }
+}
 const admin = new User({ name: 'T', title: 'admin', email: 'TTTT@tt.com' });
 console.log(Object.getPrototypeOf(admin) === User.prototype);
 console.log(admin.getEmail());
@@ -194,3 +204,6 @@ console.log(admin.changeEmail('gg'))
 console.log(admin.email);
 admin.email = 'tttgggg';
 console.log(admin.email);
+console.log(User.prototype);
+const editor = new ContentEditor({ name: 'ggg', title: 'ggg', email: 'ggg' })
+console.log(editor)
