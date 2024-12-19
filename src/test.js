@@ -164,4 +164,4 @@ class User {
 }
 
 const admin = new User({ name: 'T', title: 'admin' });
-console.log(admin)
+console.log(Object.getPrototypeOf(admin) === User.prototype)
