@@ -177,9 +177,20 @@ class User {
   changeEmail(newEmail) {
     return this.#validateEmail(newEmail) ? this.#email = newEmail : 'Wrong format';
   }
+
+  get email() {
+    return this.#email;
+  }
+
+  set email(newEmail) {
+    this.#email = newEmail;
+  }
 }
 
 const admin = new User({ name: 'T', title: 'admin', email: 'TTTT@tt.com' });
 console.log(Object.getPrototypeOf(admin) === User.prototype);
 console.log(admin.getEmail());
 console.log(admin.changeEmail('gg'))
+console.log(admin.email);
+admin.email = 'tttgggg';
+console.log(admin.email);
