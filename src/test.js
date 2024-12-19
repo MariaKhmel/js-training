@@ -149,61 +149,61 @@
 // console.log(dog.legs)
 // console.log(dog.hasOwnProperty("legs"));
 
-class User {
-  #email;
-  static role = 'admin';
+// class User {
+//   #email;
+//   static role = 'admin';
 
-  constructor(params) {
-    this.name = params.name;
-    this.title = params.title;
-    this.#email = params.email;
-  }
+//   constructor(params) {
+//     this.name = params.name;
+//     this.title = params.title;
+//     this.#email = params.email;
+//   }
 
-  getName() {
-    return this.name;
-  }
+//   getName() {
+//     return this.name;
+//   }
 
-  getEmail() {
-    return this.#email;
-  }
+//   getEmail() {
+//     return this.#email;
+//   }
 
-  #validateEmail(newEmail) {
-    return newEmail.includes('@');
-  }
+//   #validateEmail(newEmail) {
+//     return newEmail.includes('@');
+//   }
 
-  changeName(newName) {
-    this.name = newName;
-  }
+//   changeName(newName) {
+//     this.name = newName;
+//   }
 
-  changeEmail(newEmail) {
-    return this.#validateEmail(newEmail) ? this.#email = newEmail : 'Wrong format';
-  }
+//   changeEmail(newEmail) {
+//     return this.#validateEmail(newEmail) ? this.#email = newEmail : 'Wrong format';
+//   }
 
-  get email() {
-    return this.#email;
-  }
+//   get email() {
+//     return this.#email;
+//   }
 
-  set email(newEmail) {
-    this.#email = newEmail;
-  }
-
-
-}
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
 
 
-class ContentEditor extends User {
-  constructor(params) {
-    super(params)
-    this.posts = params.posts;
-  }
-}
-const admin = new User({ name: 'T', title: 'admin', email: 'TTTT@tt.com' });
-console.log(Object.getPrototypeOf(admin) === User.prototype);
-console.log(admin.getEmail());
-console.log(admin.changeEmail('gg'))
-console.log(admin.email);
-admin.email = 'tttgggg';
-console.log(admin.email);
-console.log(User.prototype);
-const editor = new ContentEditor({ name: 'ggg', title: 'ggg', email: 'ggg' })
-console.log(editor)
+// }
+
+
+// class ContentEditor extends User {
+//   constructor(params) {
+//     super(params)
+//     this.posts = params.posts;
+//   }
+// }
+// const admin = new User({ name: 'T', title: 'admin', email: 'TTTT@tt.com' });
+// console.log(Object.getPrototypeOf(admin) === User.prototype);
+// console.log(admin.getEmail());
+// console.log(admin.changeEmail('gg'))
+// console.log(admin.email);
+// admin.email = 'tttgggg';
+// console.log(admin.email);
+// console.log(User.prototype);
+// const editor = new ContentEditor({ name: 'ggg', title: 'ggg', email: 'ggg' })
+// console.log(editor)
