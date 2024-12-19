@@ -209,25 +209,33 @@
 // const editor = new ContentEditor({ name: 'ggg', title: 'ggg', email: 'ggg' })
 // console.log(editor)
 
-class User {
-  static role = 'base'
-  constructor(email) {
-    this.email = email;
-  }
+// class User {
+//   static role = 'base'
+//   constructor(email) {
+//     this.email = email;
+//   }
 
-  static getRole() {
-    return this.role;
-  }
-}
+//   static getRole() {
+//     return this.role;
+//   }
+// }
 
-class Editor extends User {
+// class Editor extends User {
 
 
-  constructor({ email, posts }) {
-    super(email);
-    this.posts = posts;
-  }
-}
+//   constructor({ email, posts }) {
+//     super(email);
+//     this.posts = posts;
+//   }
+// }
 
-const editor = new Editor({ email: 'email&f', posts: [] });
-console.log(Editor.getRole())
+// const editor = new Editor({ email: 'email&f', posts: [] });
+// console.log(Editor.getRole())
+
+const menu = document.querySelector('.menu');
+const elements = document.querySelectorAll('.menu-item')
+console.log(menu.id)
+console.log(elements)
+
+const saveBtn = document.querySelector('button[data-action="save"]')
+console.log(saveBtn.dataset.action)
