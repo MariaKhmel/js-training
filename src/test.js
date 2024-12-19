@@ -10,6 +10,7 @@
 //   }
 // }
 
+
 // const counter = createCounter();
 // console.log(counter.increment());
 // console.log(counter.increment())
@@ -149,19 +150,36 @@
 // console.log(dog.hasOwnProperty("legs"));
 
 class User {
+  #email;
+
   constructor(params) {
     this.name = params.name;
     this.title = params.title;
+    this.#email = params.email;
   }
 
   getName() {
     return this.name;
   }
 
+  getEmail() {
+    return this.#email;
+  }
+
+  #validateEmail(newEmail) {
+    return newEmail.includes('@');
+  }
+
   changeName(newName) {
     this.name = newName;
   }
+
+  changeEmail(newEmail) {
+    return this.#validateEmail(newEmail) ? this.#email = newEmail : 'Wrong format';
+  }
 }
 
-const admin = new User({ name: 'T', title: 'admin' });
-console.log(Object.getPrototypeOf(admin) === User.prototype)
+const admin = new User({ name: 'T', title: 'admin', email: 'TTTT@tt.com' });
+console.log(Object.getPrototypeOf(admin) === User.prototype);
+console.log(admin.getEmail());
+console.log(admin.changeEmail('gg'))
