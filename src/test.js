@@ -239,3 +239,7 @@ console.log(elements)
 
 const saveBtn = document.querySelector('button[data-action="save"]')
 console.log(saveBtn.dataset.action)
+
+saveBtn.addEventListener('click', () => {
+  console.log('clicked')
+}) 
