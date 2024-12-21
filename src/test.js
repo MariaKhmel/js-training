@@ -242,4 +242,13 @@ console.log(saveBtn.dataset.action)
 
 saveBtn.addEventListener('click', () => {
   console.log('clicked')
-}) 
+})
+
+const firstCallback = () => console.log('1st click');
+const secondCallback = () => console.log('2nd click');
+const thirdCallback = () => console.log('3rd click');
+
+const multiclickBtn = document.querySelector('button[data-action="multi"]');
+multiclickBtn.addEventListener('click', firstCallback);
+multiclickBtn.addEventListener('click', secondCallback);
+multiclickBtn.addEventListener('click', thirdCallback);
