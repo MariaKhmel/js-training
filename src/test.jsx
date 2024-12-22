@@ -429,3 +429,19 @@ fetchUsersBtn.addEventListener('click', () => {
       usersList.insertAdjacentHTML('beforeend', markup);
     });
 });
+
+const postToAdd = {
+  title: 'CRUD',
+  body: 'CRUD is awesome!',
+};
+
+const options = {
+  method: 'POST',
+  body: JSON.stringify(postToAdd),
+  headers: {
+    'Content-Type': 'application/json; charset=UTF-8',
+  },
+};
+fetch('https://jsonplaceholder.typicode.com/posts', options)
+  .then(res => res.json())
+  .then(result => console.log(result));
