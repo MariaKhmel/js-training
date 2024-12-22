@@ -257,3 +257,68 @@ const multiclickBtn = document.querySelector('button[data-action="multi"]');
 multiclickBtn.addEventListener('click', firstCallback);
 multiclickBtn.addEventListener('click', secondCallback);
 multiclickBtn.addEventListener('click', thirdCallback);
+
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+  console.log(e)
+})
+
+const letters = '0123456ABCDEF';
+
+
+const parent = document.querySelector('#parent');
+const descendant = document.querySelector('#descendant');
+
+const generateRandomHexColor = () => {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+
+  for (let i = 0; i < 6; i += 1) {
+    color += letters[Math.floor(Math.random() * 16)]
+  }
+
+  return color;
+}
+parent.addEventListener('click', (e) => {
+  console.log(e.target.nodeName)
+});
+
+const refs = {
+  selectedColorOutput: document.querySelector('.output'),
+  palette: document.querySelector('.colorPalette'),
+}
+
+refs.palette.addEventListener('click', getSelectedColor)
+
+function createColorPalette() {
+  const buttonsList = document.createElement('ul');
+  buttonsList.classList.add('buttonList')
+  for (let i = 1; i <= 60; i += 1) {
+    const li = document.createElement('li');
+    const colorButton = document.createElement('button');
+    colorButton.type = 'button';
+    colorButton.classList.add('colorButton');
+    const color = generateRandomHexColor();
+    colorButton.style.backgroundColor = color;
+    colorButton.dataset.color = color;
+    li.append(colorButton);
+    buttonsList.append(li);
+  }
+
+  refs.palette.append(buttonsList)
+}
+
+createColorPalette();
+
+
+function getSelectedColor(e) {
+  if (e.target.nodeName !== 'BUTTON') {
+    return;
+  }
+  const selectedColor = e.target.dataset.color;
+  console.log(selectedColor)
+  refs.selectedColorOutput.textContent = `Selected color - ${selectedColor
+    }`;
+}
