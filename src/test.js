@@ -341,15 +341,51 @@ console.log(localStorage)
 
 const isSuccess = true;
 
-const promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    if (isSuccess) {
-      resolve('success');
-    } else {
-      reject('failed')
-    }
-  }, 2000)
-})
-promise.then((value) => {
-  return value;
-}).then(value => console.log(typeof value))
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     if (isSuccess) {
+//       resolve('success');
+//     } else {
+//       reject('failed')
+//     }
+//   }, 2000)
+// })
+// promise.then((value) => {
+//   return value;
+// }).then(value => console.log(typeof value))
+
+// const fetchUserFromServer = (userName, onSuccess, onError) => {
+//   console.log(`Fetching data for ${userName}`);
+
+//   const isSuccess = true;
+
+//   setTimeout(() => {
+//     if (isSuccess) {
+//       onSuccess('success');
+//     } else {
+//       onError('error');
+//     }
+//   }, 2000)
+
+// }
+
+// fetchUserFromServer('Tim', (value) => console.log(value), (value) => console.log(value))
+
+const fetchUserFromServer = (userName) => {
+  console.log(`Fetching data for ${userName}`);
+  const isSuccess = true;
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (isSuccess) {
+        resolve('success');
+      } else {
+        reject('error');
+      }
+    }, 2000)
+  })
+
+}
+
+fetchUserFromServer('Tim')
+  .then(value => console.log(value))
+  .catch(error => console.log(error));
