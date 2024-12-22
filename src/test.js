@@ -371,21 +371,59 @@ const isSuccess = true;
 
 // fetchUserFromServer('Tim', (value) => console.log(value), (value) => console.log(value))
 
-const fetchUserFromServer = (userName) => {
-  console.log(`Fetching data for ${userName}`);
-  const isSuccess = true;
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (isSuccess) {
-        resolve('success');
-      } else {
-        reject('error');
-      }
-    }, 2000)
-  })
+// const fetchUserFromServer = (userName) => {
+//   console.log(`Fetching data for ${userName}`);
+//   const isSuccess = true;
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (isSuccess) {
+//         resolve('success');
+//       } else {
+//         reject('error');
+//       }
+//     }, 2000)
+//   })
 
-}
+// }
 
-fetchUserFromServer('Tim')
-  .then(value => console.log(value))
-  .catch(error => console.log(error));
+// fetchUserFromServer('Tim')
+//   .then(value => console.log(value))
+//   .catch(error => console.log(error));
+
+// Promise.resolve("success value")
+//   .then(value => {
+//     console.log(value);
+//     throw new Error('wrong')
+//   })
+//   .catch(error => console.log(error));
+
+
+// new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve('Fulfilled A');
+//   }, 1000);
+// })
+//   .then(value => console.log(value))
+//   .catch(error => console.log(error));
+
+// new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve('Fulfilled B');
+//   }, 3000);
+// })
+//   .then(value => console.log(value))
+//   .catch(error => console.log(error));
+
+// new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     reject('Rejected C');
+//   }, 2000);
+// })
+//   .then(value => console.log(value))
+//   .catch(error => console.log(error)); // "Rejected C"
+
+
+const fetchUsersBtn = document.querySelector('button[data-action="fetchUsers"]');
+const usersList = document.querySelector('.usersList');
+console.log(fetchUsersBtn)
+console.log(usersList)
