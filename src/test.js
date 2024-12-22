@@ -322,3 +322,5 @@ function getSelectedColor(e) {
   refs.selectedColorOutput.textContent = `Selected color - ${selectedColor
     }`;
 }
+
+console.log(localStorage)
