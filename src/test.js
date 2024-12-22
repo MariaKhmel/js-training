@@ -240,8 +240,13 @@ console.log(elements)
 const saveBtn = document.querySelector('button[data-action="save"]')
 console.log(saveBtn.dataset.action)
 
-saveBtn.addEventListener('click', () => {
-  console.log('clicked')
+saveBtn.addEventListener('click', (e) => {
+  console.log(e.target);
+})
+
+document.addEventListener('keydown', (e) => {
+  console.log(e.code);
+  console.log(e.key);
 })
 
 const firstCallback = () => console.log('1st click');
