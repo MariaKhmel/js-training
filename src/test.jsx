@@ -10,8 +10,6 @@
 //   }
 // }
 
-
-
 // const counter = createCounter();
 // console.log(counter.increment());
 // console.log(counter.increment())
@@ -44,8 +42,6 @@
 // console.log(secondSymbol('Hello world!!!', 'l'))
 // console.log(secondSymbol('Hello world!!!', 'o'))
 // console.log(secondSymbol('Hello world!!!', 'A'))
-
-
 
 // function orderWeight(strng) {
 //   const arr = strng.split(' ');
@@ -131,7 +127,6 @@
 //   { name: "Kiwi", score: 94, courses: ["literature", "science"] },
 // ];
 
-
 // const uniqueCourses = students.flatMap(student => student.courses)
 //   .filter((course, index, arr) => arr.indexOf(course) === index)
 //   .toSorted((a, b) => a.localeCompare(b));
@@ -188,9 +183,7 @@
 //     this.#email = newEmail;
 //   }
 
-
 // }
-
 
 // class ContentEditor extends User {
 //   constructor(params) {
@@ -222,7 +215,6 @@
 
 // class Editor extends User {
 
-
 //   constructor({ email, posts }) {
 //     super(email);
 //     this.posts = posts;
@@ -233,21 +225,21 @@
 // console.log(Editor.getRole())
 
 const menu = document.querySelector('.menu');
-const elements = document.querySelectorAll('.menu-item')
-console.log(menu.id)
-console.log(elements)
+const elements = document.querySelectorAll('.menu-item');
+console.log(menu.id);
+console.log(elements);
 
-const saveBtn = document.querySelector('button[data-action="save"]')
-console.log(saveBtn.dataset.action)
+const saveBtn = document.querySelector('button[data-action="save"]');
+console.log(saveBtn.dataset.action);
 
-saveBtn.addEventListener('click', (e) => {
+saveBtn.addEventListener('click', e => {
   console.log(e.target);
-})
+});
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', e => {
   console.log(e.code);
   console.log(e.key);
-})
+});
 
 const firstCallback = () => console.log('1st click');
 const secondCallback = () => console.log('2nd click');
@@ -258,29 +250,24 @@ multiclickBtn.addEventListener('click', firstCallback);
 multiclickBtn.addEventListener('click', secondCallback);
 multiclickBtn.addEventListener('click', thirdCallback);
 
-
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 const localStorageKey = 'input';
 
 input.value = localStorage.getItem(localStorageKey) ?? '';
 
+form.addEventListener('input', e => {
+  localStorage.setItem(localStorageKey, e.target.value);
+});
 
-form.addEventListener('input', (e) => {
-  localStorage.setItem(localStorageKey, e.target.value)
-})
-
-
-
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', e => {
   e.preventDefault();
-  console.log(e.target.elements.input.value)
+  console.log(e.target.elements.input.value);
   localStorage.removeItem(localStorageKey);
   form.reset();
-})
+});
 
 const letters = '0123456ABCDEF';
-
 
 const parent = document.querySelector('#parent');
 const descendant = document.querySelector('#descendant');
@@ -290,25 +277,25 @@ const generateRandomHexColor = () => {
   let color = '#';
 
   for (let i = 0; i < 6; i += 1) {
-    color += letters[Math.floor(Math.random() * 16)]
+    color += letters[Math.floor(Math.random() * 16)];
   }
 
   return color;
-}
-parent.addEventListener('click', (e) => {
-  console.log(e.target.nodeName)
+};
+parent.addEventListener('click', e => {
+  console.log(e.target.nodeName);
 });
 
 const refs = {
   selectedColorOutput: document.querySelector('.output'),
   palette: document.querySelector('.colorPalette'),
-}
+};
 
-refs.palette.addEventListener('click', getSelectedColor)
+refs.palette.addEventListener('click', getSelectedColor);
 
 function createColorPalette() {
   const buttonsList = document.createElement('ul');
-  buttonsList.classList.add('buttonList')
+  buttonsList.classList.add('buttonList');
   for (let i = 1; i <= 60; i += 1) {
     const li = document.createElement('li');
     const colorButton = document.createElement('button');
@@ -321,23 +308,21 @@ function createColorPalette() {
     buttonsList.append(li);
   }
 
-  refs.palette.append(buttonsList)
+  refs.palette.append(buttonsList);
 }
 
 createColorPalette();
-
 
 function getSelectedColor(e) {
   if (e.target.nodeName !== 'BUTTON') {
     return;
   }
   const selectedColor = e.target.dataset.color;
-  console.log(selectedColor)
-  refs.selectedColorOutput.textContent = `Selected color - ${selectedColor
-    }`;
+  console.log(selectedColor);
+  refs.selectedColorOutput.textContent = `Selected color - ${selectedColor}`;
 }
 
-console.log(localStorage)
+console.log(localStorage);
 
 const isSuccess = true;
 
@@ -397,7 +382,6 @@ const isSuccess = true;
 //   })
 //   .catch(error => console.log(error));
 
-
 // new Promise((resolve, reject) => {
 //   setTimeout(() => {
 //     resolve('Fulfilled A');
@@ -422,8 +406,26 @@ const isSuccess = true;
 //   .then(value => console.log(value))
 //   .catch(error => console.log(error)); // "Rejected C"
 
-
-const fetchUsersBtn = document.querySelector('button[data-action="fetchUsers"]');
+const fetchUsersBtn = document.querySelector(
+  'button[data-action="fetchUsers"]'
+);
 const usersList = document.querySelector('.usersList');
-console.log(fetchUsersBtn)
-console.log(usersList)
+
+fetchUsersBtn.addEventListener('click', () => {
+  fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => {
+      return res.json();
+    })
+    .then(users => {
+      const markup = users
+        .map(
+          user =>
+            `<li key=${user.id}>
+            <p>${user.name}</p>
+          </li>`
+        )
+        .join('');
+
+      usersList.insertAdjacentHTML('beforeend', markup);
+    });
+});
