@@ -260,9 +260,23 @@ multiclickBtn.addEventListener('click', thirdCallback);
 
 
 const form = document.querySelector('form');
+const input = document.querySelector('input');
+const localStorageKey = 'input';
+
+input.value = localStorage.getItem(localStorageKey) ?? '';
+
+
+form.addEventListener('input', (e) => {
+  localStorage.setItem(localStorageKey, e.target.value)
+})
+
+
 
 form.addEventListener('submit', (e) => {
-  console.log(e)
+  e.preventDefault();
+  console.log(e.target.elements.input.value)
+  localStorage.removeItem(localStorageKey);
+  form.reset();
 })
 
 const letters = '0123456ABCDEF';
