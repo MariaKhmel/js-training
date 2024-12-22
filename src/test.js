@@ -338,3 +338,18 @@ function getSelectedColor(e) {
 }
 
 console.log(localStorage)
+
+const isSuccess = true;
+
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (isSuccess) {
+      resolve('success');
+    } else {
+      reject('failed')
+    }
+  }, 2000)
+})
+promise.then((value) => {
+  return value;
+}).then(value => console.log(typeof value))
