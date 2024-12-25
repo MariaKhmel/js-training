@@ -1,4 +1,6 @@
 import axios from 'axios';
+import iziToast from 'izitoast';
+import { useState } from 'react';
 
 // function createCounter() {
 //   let counter = 0;
@@ -448,13 +450,54 @@ const isSuccess = true;
 //   .then(res => res.json())
 //   .then(result => console.log(result));
 
+///refs
+const posts = document.querySelector('.posts');
+const button = document.querySelector('button[data-action="fetchUsers"]');
+//controls
+let page = 1;
+const limit = 45;
+const totalPages = Math.ceil(100 / limit);
+
+///utils
 const fetchUsers = async () => {
   const response = await axios.get(
-    'https://jsonplaceholder.typicode.com/users'
+    `https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`
   );
   return response.data;
 };
 
-fetchUsers().then(data => console.log(data));
-const result = 10 / 0;
-console.log(result);
+const createPostsMarkup = posts => {
+  return posts
+    .map(
+      post =>
+        `<li key=${post.id}>
+        <p>${post.title}</p>
+      </li>
+    `
+    )
+    .join('');
+};
+
+const onFetchUsersClick = async () => {
+  button.disabled = true;
+  button.textContent = 'Fetching...';
+  try {
+    const data = await fetchUsers().then(posts => posts);
+    const markup = createPostsMarkup(data);
+    posts.insertAdjacentHTML('beforeend', markup);
+    page += 1;
+    if (page > totalPages) {
+      button.disabled = true;
+      button.textContent = 'No more users';
+    } else {
+      button.disabled = false;
+      button.textContent = 'Load More';
+    }
+  } catch (error) {
+    button.disabled = true;
+    console.log(error);
+  }
+};
+
+///logics
+button.addEventListener('click', onFetchUsersClick);
