@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 // function createCounter() {
 //   let counter = 0;
 //   return {
@@ -406,42 +408,53 @@ const isSuccess = true;
 //   .then(value => console.log(value))
 //   .catch(error => console.log(error)); // "Rejected C"
 
-const fetchUsersBtn = document.querySelector(
-  'button[data-action="fetchUsers"]'
-);
-const usersList = document.querySelector('.usersList');
+// const fetchUsersBtn = document.querySelector(
+//   'button[data-action="fetchUsers"]'
+// );
+// const usersList = document.querySelector('.usersList');
 
-fetchUsersBtn.addEventListener('click', () => {
-  fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => {
-      return res.json();
-    })
-    .then(users => {
-      const markup = users
-        .map(
-          user =>
-            `<li key=${user.id}>
-            <p>${user.name}</p>
-          </li>`
-        )
-        .join('');
+// fetchUsersBtn.addEventListener('click', () => {
+//   fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(res => {
+//       return res.json();
+//     })
+//     .then(users => {
+//       const markup = users
+//         .map(
+//           user =>
+//             `<li key=${user.id}>
+//             <p>${user.name}</p>
+//           </li>`
+//         )
+//         .join('');
 
-      usersList.insertAdjacentHTML('beforeend', markup);
-    });
-});
+//       usersList.insertAdjacentHTML('beforeend', markup);
+//     });
+// });
 
-const postToAdd = {
-  title: 'CRUD',
-  body: 'CRUD is awesome!',
+// const postToAdd = {
+//   title: 'CRUD',
+//   body: 'CRUD is awesome!',
+// };
+
+// const options = {
+//   method: 'POST',
+//   body: JSON.stringify(postToAdd),
+//   headers: {
+//     'Content-Type': 'application/json; charset=UTF-8',
+//   },
+// };
+// fetch('https://jsonplaceholder.typicode.com/posts', options)
+//   .then(res => res.json())
+//   .then(result => console.log(result));
+
+const fetchUsers = async () => {
+  const response = await axios.get(
+    'https://jsonplaceholder.typicode.com/users'
+  );
+  return response.data;
 };
 
-const options = {
-  method: 'POST',
-  body: JSON.stringify(postToAdd),
-  headers: {
-    'Content-Type': 'application/json; charset=UTF-8',
-  },
-};
-fetch('https://jsonplaceholder.typicode.com/posts', options)
-  .then(res => res.json())
-  .then(result => console.log(result));
+fetchUsers().then(data => console.log(data));
+const result = 10 / 0;
+console.log(result);
