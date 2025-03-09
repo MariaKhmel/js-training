@@ -1617,3 +1617,29 @@ const movie = {
 // Promise.race([p1, p2])
 //   .then(value => console.log(value)) // 1
 // 	.catch (error => console.log(error));
+
+
+for (var i = 1; i <= 6; i += 1) {
+  setTimeout(() => {
+    console.log(i)
+  }, 1000);
+}
+
+for (let i = 1; i <= 3; i += 1) {
+  setTimeout(() => {
+    console.log(i)
+  }, 1000);
+}
+
+for (let i = 1; i <= 4; i += 1) {
+  (function (i) {
+    setTimeout(() => {
+      console.log(i)
+    }, 1000);
+  })(i)
+}
+
+[1, 2.3].forEach(el => (setTimeout(() => {
+  console.log(el)
+}, 1000)))
+
