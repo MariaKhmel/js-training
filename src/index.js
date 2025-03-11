@@ -1619,27 +1619,47 @@ const movie = {
 // 	.catch (error => console.log(error));
 
 
-for (var i = 1; i <= 6; i += 1) {
-  setTimeout(() => {
-    console.log(i)
-  }, 1000);
+// for (var i = 1; i <= 6; i += 1) {
+//   setTimeout(() => {
+//     console.log(i)
+//   }, 1000);
+// }
+
+// for (let i = 1; i <= 3; i += 1) {
+//   setTimeout(() => {
+//     console.log(i)
+//   }, 1000);
+// }
+
+// for (let i = 1; i <= 4; i += 1) {
+//   (function (i) {
+//     setTimeout(() => {
+//       console.log(i)
+//     }, 1000);
+//   })(i)
+// }
+
+// [1, 2.3].forEach(el => (setTimeout(() => {
+//   console.log(el)
+// }, 1000)))
+
+const createCounter = () => {
+  let counter = 0;
+  return {
+    increment: () => counter += 1,
+    decrement: () => counter -= 1,
+    getValue: () => counter
+  }
 }
 
-for (let i = 1; i <= 3; i += 1) {
-  setTimeout(() => {
-    console.log(i)
-  }, 1000);
+const counter1 = createCounter();
+counter1.increment();
+counter1.decrement();
+console.log(counter1.getValue())
+
+
+const arrow = () => {
+  console.log(this)
 }
 
-for (let i = 1; i <= 4; i += 1) {
-  (function (i) {
-    setTimeout(() => {
-      console.log(i)
-    }, 1000);
-  })(i)
-}
-
-[1, 2.3].forEach(el => (setTimeout(() => {
-  console.log(el)
-}, 1000)))
-
+arrow()
