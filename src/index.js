@@ -1643,23 +1643,23 @@ const movie = {
 //   console.log(el)
 // }, 1000)))
 
-const createCounter = () => {
-  let counter = 0;
-  return {
-    increment: () => counter += 1,
-    decrement: () => counter -= 1,
-    getValue: () => counter
-  }
-}
+// const createCounter = () => {
+//   let counter = 0;
+//   return {
+//     increment: () => counter += 1,
+//     decrement: () => counter -= 1,
+//     getValue: () => counter
+//   }
+// }
 
-const counter1 = createCounter();
-counter1.increment();
-counter1.decrement();
-console.log(counter1.getValue())
+// const counter1 = createCounter();
+// counter1.increment();
+// counter1.decrement();
+// console.log(counter1.getValue())
 
 
-const arrow = () => {
-  console.log(this)
-}
+// const arrow = () => {
+//   console.log(this)
+// }
 
-arrow()
+// arrow()
