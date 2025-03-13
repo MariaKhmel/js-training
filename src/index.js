@@ -1663,3 +1663,61 @@ const movie = {
 // }
 
 // arrow()
+
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// Person.prototype.greet = function () {
+//   console.log(`Hello ${this.name}`);
+// }
+
+// const user = new Person("John", 22);
+// user.greet()
+
+// function Animal(name) {
+//   this.name = name;
+// }
+
+// Animal.prototype.speak = function () {
+//   console.log(`${this.name} makes a noise.`);
+// };
+
+// function Dog(name) {
+//   Animal.call(this, name); // Calling the Animal constructor
+// }
+
+// // Inherit methods from Animal
+// Dog.prototype = Object.create(Animal.prototype);
+// Dog.prototype.constructor = Dog;
+
+// // Add Dog-specific method
+// Dog.prototype.bark = function () {
+//   console.log(`${this.name} barks.`);
+// };
+
+// const dog = new Dog('Rex');
+// dog.speak(); // Rex makes a noise.
+// dog.bark();  // Rex barks.
+
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   speak() {
+//     console.log(`&{this.name} speaks`)
+//   }
+// }
+
+// class Dog extends Animal {
+//   bark() {
+//     console.log(`${this.name} barks`)
+//   }
+
+// }
+
+// const pet = new Dog("my pet");
+
+// pet.bark()
