@@ -1721,3 +1721,11 @@ const movie = {
 // const pet = new Dog("my pet");
 
 // pet.bark()
+
+function debounce(func, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer); // Reset the timer
+    timer = setTimeout(() => func.apply(this, args), delay);
+  };
+}
