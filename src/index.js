@@ -1729,3 +1729,8 @@ function debounce(func, delay) {
     timer = setTimeout(() => func.apply(this, args), delay);
   };
 }
+function onResize() {
+  console.log("Window resized!");
+}
+
+window.addEventListener("resize", debounce(onResize, 500));
