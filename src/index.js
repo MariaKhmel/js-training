@@ -1722,32 +1722,32 @@ const movie = {
 
 // pet.bark()
 
-function debounce(func, delay) {
-  let timer;
-  return function (...args) {
-    clearTimeout(timer); // Reset the timer
-    timer = setTimeout(() => func.apply(this, args), delay);
-  };
-}
-function onResize() {
-  console.log("Window resized!");
-}
+// function debounce(func, delay) {
+//   let timer;
+//   return function (...args) {
+//     clearTimeout(timer); // Reset the timer
+//     timer = setTimeout(() => func.apply(this, args), delay);
+//   };
+// }
+// function onResize() {
+//   console.log("Window resized!");
+// }
 
-window.addEventListener("resize", debounce(onResize, 500));
+// window.addEventListener("resize", debounce(onResize, 500));
 
 
-function throttle(func, limit) {
-  let inThrottle;
-  return function (...args) {
-    if (!inThrottle) {
-      func.apply(this, args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-}
-function onScroll() {
-  console.log("User is scrolling...");
-}
+// function throttle(func, limit) {
+//   let inThrottle;
+//   return function (...args) {
+//     if (!inThrottle) {
+//       func.apply(this, args);
+//       inThrottle = true;
+//       setTimeout(() => (inThrottle = false), limit);
+//     }
+//   };
+// }
+// function onScroll() {
+//   console.log("User is scrolling...");
+// }
 
-window.addEventListener("scroll", throttle(onScroll, 1000));
+// window.addEventListener("scroll", throttle(onScroll, 1000));
