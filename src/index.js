@@ -1751,3 +1751,21 @@ const movie = {
 // }
 
 // window.addEventListener("scroll", throttle(onScroll, 1000));
+
+let isExecuting = false;
+
+function fetchData() {
+  if (isExecuting) return;
+  isExecuting = true;
+
+  console.log("Fetching data...");
+
+  setTimeout(() => {
+    isExecuting = false;
+    console.log("Data fetched!");
+  }, 2000);
+}
+
+// Calling function multiple times
+fetchData(); // ✅ Runs
+fetchData(); // ❌ Ignored
