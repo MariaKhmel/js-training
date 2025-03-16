@@ -1788,11 +1788,11 @@ const movie = {
 
 
 function debounce(func, delay) {
-  return function (...args) {
+  return function () {
     let timer;
     clearTimeout(timer);
     timer = setTimeout(() => {
-      func.apply(this, args);
+      func.apply();
     }, delay);
   }
 
