@@ -1782,24 +1782,41 @@ const movie = {
 
 // window.addEventListener("resize", debounce(onResize, 500));
 
+// function debounce(func, delay) {
+//   let timer;
+//   return function () {
+//     console.log('in the inner func')
+//     clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       console.log("intimer")
+//       func.apply();
+//     }, delay);
+//   }
 
+// }
 
+// function onKeyDownFunc() {
+//   console.log('on key down');
+// }
 
+// window.addEventListener("keydown", debounce(onKeyDownFunc, 500));
 
+// function throttle(func, delay) {
+//   let inThrottle = false;
+//   return function () {
+//     if (!inThrottle) {
+//       func();
+//       inThrottle = true;
+//       setTimeout(() => {
+//         inThrottle = false;
+//       }, delay);
+//     }
+//   }
 
-function debounce(func, delay) {
-  return function () {
-    let timer;
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      func.apply();
-    }, delay);
-  }
+// }
 
-}
+// function onScrollFunc() {
+//   console.log('scroll')
+// }
 
-function onKeyDownFunc() {
-  console.log('on key down');
-}
-
-window.addEventListener("keydown", debounce(onKeyDownFunc, 500));
+// window.addEventListener("scroll", throttle(onScrollFunc, 2000))
