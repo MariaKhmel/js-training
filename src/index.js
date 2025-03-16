@@ -1752,20 +1752,54 @@ const movie = {
 
 // window.addEventListener("scroll", throttle(onScroll, 1000));
 
-let isExecuting = false;
+// let isExecuting = false;
 
-function fetchData() {
-  if (isExecuting) return;
-  isExecuting = true;
+// function fetchData() {
+//   if (isExecuting) return;
+//   isExecuting = true;
 
-  console.log("Fetching data...");
+//   console.log("Fetching data...");
 
-  setTimeout(() => {
-    isExecuting = false;
-    console.log("Data fetched!");
-  }, 2000);
+//   setTimeout(() => {
+//     isExecuting = false;
+//     console.log("Data fetched!");
+//   }, 2000);
+// }
+
+// // Calling function multiple times
+// fetchData(); // ✅ Runs
+// fetchData(); // ❌ Ignored
+// function debounce(func, delay) {
+//   let timer;
+//   return function (...args) {
+//     clearTimeout(timer); // Reset the timer
+//     timer = setTimeout(() => func.apply(this, args), delay);
+//   };
+// }
+// function onResize() {
+//   console.log("Window resized!");
+// }
+
+// window.addEventListener("resize", debounce(onResize, 500));
+
+
+
+
+
+
+function debounce(func, delay) {
+  return function (...args) {
+    let timer;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  }
+
 }
 
-// Calling function multiple times
-fetchData(); // ✅ Runs
-fetchData(); // ❌ Ignored
+function onKeyDownFunc() {
+  console.log('on key down');
+}
+
+window.addEventListener("keydown", debounce(onKeyDownFunc, 500));
