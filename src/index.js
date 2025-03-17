@@ -1870,12 +1870,12 @@ const movie = {
 // }
 
 // const person = { name: "Alice" };
-const person = {
-  name: "Alice",
-  greet: function () {
-    console.log(`Hello, my name is ${this.name}`)
-  }
-};
+// const person = {
+//   name: "Alice",
+//   greet: function () {
+//     console.log(`Hello, my name is ${this.name}`)
+//   }
+// };
 
-const greetFun = person.greet.bind(person);
-greetFun()
+// const greetFun = person.greet.bind(person);
+// greetFun()
