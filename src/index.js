@@ -1833,3 +1833,14 @@ greetFunction(); // Output: "Hello, my name is undefined" (this refers to the gl
 
 const boundGreet = person.greet.bind(person);
 boundGreet(); // Output: "Hello, my name is Alice"
+const button = document.querySelector("button");
+
+const user = {
+  name: "Alice",
+  showName: function () {
+    console.log(this.name);
+  },
+};
+
+button.addEventListener("click", user.showName.bind(user));
+// Output: "Alice" when button is clicked
