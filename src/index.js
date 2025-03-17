@@ -1821,26 +1821,61 @@ const movie = {
 
 // window.addEventListener("scroll", throttle(onScrollFunc, 2000))
 
+// const person = {
+//   name: "Alice",
+//   greet: function () {
+//     console.log(`Hello, my name is ${this.name}`);
+//   },
+// };
+
+// const greetFunction = person.greet;
+// greetFunction(); // Output: "Hello, my name is undefined" (this refers to the global object)
+
+// const boundGreet = person.greet.bind(person);
+// boundGreet(); // Output: "Hello, my name is Alice"
+// const button = document.querySelector("button");
+
+// const user = {
+//   name: "Alice",
+//   showName: function () {
+//     console.log(this.name);
+//   },
+// };
+
+// button.addEventListener("click", user.showName.bind(user));
+// // Output: "Alice" when button is clicked
+
+
+// const person = {
+//   name: "Alice",
+//   greet: function () {
+//     console.log(`${this.name}`);
+//   }
+// }
+
+// const greetFunc = person.greet;
+// greetFunc();
+
+// function greet() {
+//   console.log(`Hello, my name is ${this.name}`)
+// }
+
+// const person = { name: "Alice" };
+
+// const boundGreet = greet.bind(person);
+// boundGreet();
+
+// function greet() {
+//   console.log(`Hello, my name is ${this.name}`)
+// }
+
+// const person = { name: "Alice" };
 const person = {
   name: "Alice",
   greet: function () {
-    console.log(`Hello, my name is ${this.name}`);
-  },
+    console.log(`Hello, my name is ${this.name}`)
+  }
 };
 
-const greetFunction = person.greet;
-greetFunction(); // Output: "Hello, my name is undefined" (this refers to the global object)
-
-const boundGreet = person.greet.bind(person);
-boundGreet(); // Output: "Hello, my name is Alice"
-const button = document.querySelector("button");
-
-const user = {
-  name: "Alice",
-  showName: function () {
-    console.log(this.name);
-  },
-};
-
-button.addEventListener("click", user.showName.bind(user));
-// Output: "Alice" when button is clicked
+const greetFun = person.greet.bind(person);
+greetFun()
