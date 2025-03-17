@@ -1820,3 +1820,16 @@ const movie = {
 // }
 
 // window.addEventListener("scroll", throttle(onScrollFunc, 2000))
+
+const person = {
+  name: "Alice",
+  greet: function () {
+    console.log(`Hello, my name is ${this.name}`);
+  },
+};
+
+const greetFunction = person.greet;
+greetFunction(); // Output: "Hello, my name is undefined" (this refers to the global object)
+
+const boundGreet = person.greet.bind(person);
+boundGreet(); // Output: "Hello, my name is Alice"
