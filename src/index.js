@@ -1879,10 +1879,3 @@ const movie = {
 
 // const greetFun = person.greet.bind(person);
 // greetFun()
-document.getElementById("parent").addEventListener("click", () => {
-  console.log("Parent clicked!");
-}, true);  // `true` enables capturing
-
-document.getElementById("child").addEventListener("click", () => {
-  console.log("Child clicked!");
-});
