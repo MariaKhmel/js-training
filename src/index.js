@@ -1879,24 +1879,3 @@ const movie = {
 
 // const greetFun = person.greet.bind(person);
 // greetFun()
-const original = {
-  name: "Alice",
-  address: { city: "New York" }
-};
-
-const shallowCopy = { ...original }; // Shallow copy using spread operator
-shallowCopy.name = "Bob"; // ✅ Changes only in the copy
-shallowCopy.address.city = "Los Angeles"; // ❌ Also modifies the original object
-
-console.log(original.address.city); // "Los Angeles" (unexpected change!)
-const original = {
-  name: "Alice",
-  address: { city: "New York" }
-};
-
-// Deep copy using JSON
-const deepCopy = JSON.parse(JSON.stringify(original));
-
-deepCopy.address.city = "Los Angeles"; // ✅ Only modifies the copy
-
-console.log(original.address.city); // "New York" (original remains unchanged!)
