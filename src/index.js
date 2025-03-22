@@ -1879,3 +1879,13 @@ const movie = {
 
 // const greetFun = person.greet.bind(person);
 // greetFun()
+
+const original = {
+  name: "Alice",
+  address: {
+    street: "BB",
+  }
+}
+
+const copy = JSON.parse(JSON.stringify(original));
+console.log(copy)
