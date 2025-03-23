@@ -1880,25 +1880,25 @@ const movie = {
 // const greetFun = person.greet.bind(person);
 // greetFun()
 
-const original = {
-  name: "Alice",
-  address: {
-    street: "BB",
-  }
-}
+// const original = {
+//   name: "Alice",
+//   address: {
+//     street: "BB",
+//   }
+// }
 
 // const copy = JSON.parse(JSON.stringify(original));
 // console.log(copy)
 
-function deepCLone(obj) {
-  const copy = {};
-  for (let item in obj) {
-    console.log(item);
-  }
-  return copy;
-}
+// function deepCLone(obj) {
+//   const copy = {};
+//   for (let item in obj) {
+//     console.log(item);
+//   }
+//   return copy;
+// }
 
-deepCLone(original);
+// deepCLone(original);
 
 // const countDown = (num) => {
 //   for (let i = num; i >= 0; i -= 1) {
@@ -1928,3 +1928,32 @@ deepCLone(original);
 // }
 
 // countUp(1);
+
+function deepClone(obj) {
+  if (obj === null || typeof obj !== "object") {
+    console.log("obj", obj)
+    return obj;
+  }
+
+  const copy = Array.isArray(obj) ? [] : {};
+
+  for (let key in obj) {
+    copy[key] = deepClone(obj[key]);
+  }
+
+  return copy;
+}
+
+const original = {
+  name: "Alice",
+  age: 25,
+  address: {
+    city: "New York",
+    country: {
+      code: "US",
+      name: "United States",
+    },
+  },
+};
+const copy = deepClone(original);
+console.log(copy);
