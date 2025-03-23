@@ -1900,10 +1900,20 @@ function deepCLone(obj) {
 
 deepCLone(original);
 
+// const countDown = (num) => {
+//   for (let i = num; i >= 0; i -= 1) {
+//     console.log(i)
+//   }
+// }
+
+// countDown(5);
+
 const countDown = (num) => {
-  for (let i = num; i >= 0; i -= 1) {
-    console.log(i)
+  console.log(num);
+  const updatedNum = num - 1;
+  if (updatedNum >= 0) {
+    countDown(updatedNum);
   }
 }
 
-countDown(5);
+countDown(7);
