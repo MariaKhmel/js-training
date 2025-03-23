@@ -1887,5 +1887,15 @@ const original = {
   }
 }
 
-const copy = JSON.parse(JSON.stringify(original));
-console.log(copy)
+// const copy = JSON.parse(JSON.stringify(original));
+// console.log(copy)
+
+function deepCLone(obj) {
+  let copy = {};
+  for (let item in obj) {
+    console.log(item)
+  }
+  return copy;
+}
+
+deepCLone(original);
