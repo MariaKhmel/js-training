@@ -1891,9 +1891,9 @@ const original = {
 // console.log(copy)
 
 function deepCLone(obj) {
-  let copy = {};
+  const copy = {};
   for (let item in obj) {
-    console.log(item)
+    console.log(item);
   }
   return copy;
 }
