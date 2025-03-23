@@ -1908,12 +1908,23 @@ deepCLone(original);
 
 // countDown(5);
 
-const countDown = (num) => {
-  console.log(num);
-  const updatedNum = num - 1;
-  if (updatedNum >= 0) {
-    countDown(updatedNum);
-  }
-}
+// const countDown = (num) => {
+//   console.log(num);
+//   const updatedNum = num - 1;
+//   if (updatedNum >= 0) {
+//     countDown(updatedNum);
+//   }
+// }
 
-countDown(7);
+// countDown(7);
+
+
+// const countUp = (num) => {
+//   console.log(num);
+//   const updatedNum = num + 1;
+//   if (updatedNum <= 10) {
+//     countUp(updatedNum);
+//   }
+// }
+
+// countUp(1);
