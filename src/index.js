@@ -1929,31 +1929,51 @@ const movie = {
 
 // countUp(1);
 
-function deepClone(obj) {
-  if (obj === null || typeof obj !== "object") {
-    console.log("obj", obj)
-    return obj;
-  }
+// function deepClone(obj) {
+//   if (obj === null || typeof obj !== "object") {
+//     console.log("obj", obj)
+//     return obj;
+//   }
 
-  const copy = Array.isArray(obj) ? [] : {};
+//   const copy = Array.isArray(obj) ? [] : {};
 
-  for (let key in obj) {
-    copy[key] = deepClone(obj[key]);
-  }
+//   for (let key in obj) {
+//     copy[key] = deepClone(obj[key]);
+//   }
 
-  return copy;
+//   return copy;
+// }
+
+// const original = {
+//   name: "Alice",
+//   age: 25,
+//   address: {
+//     city: "New York",
+//     country: {
+//       code: "US",
+//       name: "United States",
+//     },
+//   },
+// };
+// const copy = deepClone(original);
+// console.log(copy);
+
+// function* generator(i) {
+//   yield i;
+//   yield i + 10;
+// }
+
+// const gen = generator(10);
+// gen()
+
+function* generator(i) {
+  yield i;
+  yield i + 10;
+  return 1;
 }
 
-const original = {
-  name: "Alice",
-  age: 25,
-  address: {
-    city: "New York",
-    country: {
-      code: "US",
-      name: "United States",
-    },
-  },
-};
-const copy = deepClone(original);
-console.log(copy);
+const gen = generator(1);
+
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
