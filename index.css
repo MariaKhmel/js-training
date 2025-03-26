@@ -2,3 +2,11 @@
   background-color: lightgoldenrodyellow;
   height: 100vh;
 }
+
+.button {
+  padding: 5px;
+  background-color: lightblue;
+
+  border: 1px solid grey;
+  border-radius: 10px;
+}
