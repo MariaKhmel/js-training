@@ -4,9 +4,10 @@
 }
 
 .button {
-  padding: 5px;
+  padding: 10px 5px;
   background-color: lightblue;
-
+  font-weight: 700;
+  color: black;
   border: 1px solid grey;
   border-radius: 10px;
 }
