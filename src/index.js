@@ -1977,3 +1977,6 @@ const movie = {
 // console.log(gen.next());
 // console.log(gen.next());
 // console.log(gen.next());
+
+const toggleBtn = document.querySelector(".button");
+console.log(toggleBtn)
