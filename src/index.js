@@ -1966,14 +1966,14 @@ const movie = {
 // const gen = generator(10);
 // gen()
 
-function* generator(i) {
-  yield i;
-  yield i + 10;
-  return 1;
-}
+// function* generator(i) {
+//   yield i;
+//   yield i + 10;
+//   return 1;
+// }
 
-const gen = generator(1);
+// const gen = generator(1);
 
-console.log(gen.next());
-console.log(gen.next());
-console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
