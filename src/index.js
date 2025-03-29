@@ -1987,3 +1987,20 @@ function onToggleBtnClick() {
 
 
 toggleBtn.addEventListener("click", onToggleBtnClick)
+
+
+// Task 1: Create a Debounced Search Input
+// Problem Statement:
+// Implement a search input field where user input is processed only after the user stops typing for 500ms.
+
+//   Requirements:
+// Create an input field where users can type a query.
+// Use debouncing to delay API call simulation(use console.log instead of an actual API call).
+// When the user stops typing for 500ms, print the query to the console.
+// Ensure the previous timer is cleared when a new keystroke occurs.
+//   Example:
+// js
+// Copy
+// Edit
+// // Example Input: User types "hello" quickly
+// // Console Output: "Searching for: hello" (printed after 500ms pause)
