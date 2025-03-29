@@ -1981,9 +1981,8 @@ const movie = {
 const toggleBtn = document.querySelector(".button");
 const container = document.querySelector(".container")
 
-function onToggleBtnClick(e) {
-  container.style.backgroundColor = "black";
-  toggleBtn.style.color = "lightgoldenrodyellow";
+function onToggleBtnClick() {
+  container.classList.toggle("darkMode");
 }
 
 
