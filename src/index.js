@@ -1978,15 +1978,15 @@ const movie = {
 // console.log(gen.next());
 // console.log(gen.next());
 
-const toggleBtn = document.querySelector(".button");
-const container = document.querySelector(".container")
+// const toggleBtn = document.querySelector(".button");
+// const container = document.querySelector(".container")
 
-function onToggleBtnClick() {
-  container.classList.toggle("darkMode");
-}
+// function onToggleBtnClick() {
+//   container.classList.toggle("darkMode");
+// }
 
 
-toggleBtn.addEventListener("click", onToggleBtnClick)
+// toggleBtn.addEventListener("click", onToggleBtnClick)
 
 
 // Task 1: Create a Debounced Search Input
@@ -2007,3 +2007,6 @@ toggleBtn.addEventListener("click", onToggleBtnClick)
 
 
 const inputRef = document.querySelector("#searchInput");
+console.log(inputRef)
+
+// inputRef.addEventListener("change")
