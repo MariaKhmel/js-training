@@ -2004,3 +2004,6 @@ toggleBtn.addEventListener("click", onToggleBtnClick)
 // Edit
 // // Example Input: User types "hello" quickly
 // // Console Output: "Searching for: hello" (printed after 500ms pause)
+
+
+const inputRef = document.querySelector("#searchInput");
