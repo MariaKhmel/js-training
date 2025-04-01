@@ -2007,10 +2007,11 @@ const movie = {
 
 
 const inputRef = document.querySelector("#searchInput");
-console.log(inputRef);
 
-function debounceSearch(e) {
-  console.log(e)
+
+
+function handleSearch(e) {
+  console.log(`Search value: "${e.target.value}"`);
 }
 
 
