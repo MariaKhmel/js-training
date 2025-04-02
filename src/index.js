@@ -2014,7 +2014,6 @@ function debounce(func, delay) {
 
   return function (...args) {
     clearTimeout(timer);
-    console.log(args);
     timer = setTimeout(() => {
       return func.apply(this, args)
     }, delay);
