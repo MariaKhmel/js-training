@@ -2008,11 +2008,26 @@ const movie = {
 
 const inputRef = document.querySelector("#searchInput");
 
+function debounce(func, delay) {
+
+  let timer;
+
+  return function (...args) {
+    clearTimeout(timer);
+    console.log(args);
+    timer = setTimeout(() => {
+      return func.apply(this, args)
+    }, delay);
+  }
+
+}
 
 
 function handleSearch(e) {
   console.log(`Search value: "${e.target.value}"`);
 }
+
+const debounceSearch = debounce(handleSearch, 500);
 
 
 inputRef.addEventListener("input", debounceSearch)
