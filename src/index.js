@@ -2022,11 +2022,3 @@ function debounce(func, delay) {
 }
 
 
-function handleSearch(e) {
-  console.log(`Search value: "${e.target.value}"`);
-}
-
-const debounceSearch = debounce(handleSearch, 500);
-
-
-inputRef.addEventListener("input", debounceSearch)
